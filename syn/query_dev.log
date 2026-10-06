@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Jul 21 18:32:23 2026
+# Process ID         : 11856
+# Current directory  : C:/Claude/Code/PQ
+# Command line       : vivado.exe -mode batch -source syn\query_dev.tcl -nojournal -log syn\query_dev.log
+# Log file           : C:/Claude/Code/PQ/syn/query_dev.log
+# Journal file       : 
+# Running On         : MLegion
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16935 MB
+# Swap memory        : 18253 MB
+# Total Virtual      : 35189 MB
+# Available Virtual  : 6938 MB
+#-----------------------------------------------------------
+source {syn\query_dev.tcl}
+# set part xc7a100tcsg324-1
+# link_design -part $part
+Command: link_design -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 699.793 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 823.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 823.281 ; gain = 540.566
+# puts "CLKREGIONS:"
+CLKREGIONS:
+# foreach cr [lsort [get_clock_regions]] { puts "  $cr" }
+  X0Y0
+  X0Y1
+  X0Y2
+  X0Y3
+  X1Y0
+  X1Y1
+  X1Y2
+  X1Y3
+# set xs {}
+# foreach s [get_sites -filter {SITE_TYPE == RAMB36}] {
+#   regexp {X(\d+)Y(\d+)} $s -> x y
+#   lappend xs $x
+# }
+# set uniq [lsort -integer -unique $xs]
+# puts "RAMB36_COLS(X): $uniq   count=[llength [get_sites -filter {SITE_TYPE==RAMB36}]]"
+RAMB36_COLS(X):    count=0
+# set sx {}
+# set sy {}
+# foreach s [get_sites -filter {SITE_TYPE =~ SLICE*}] {
+#   regexp {X(\d+)Y(\d+)} $s -> x y; lappend sx $x; lappend sy $y
+# }
+# puts "SLICE X: [lindex [lsort -integer $sx] 0] .. [lindex [lsort -integer $sx] end]"
+SLICE X: 0 .. 89
+# puts "SLICE Y: [lindex [lsort -integer $sy] 0] .. [lindex [lsort -integer $sy] end]"
+SLICE Y: 0 .. 199
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 18:32:37 2026...

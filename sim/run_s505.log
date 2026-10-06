@@ -1,0 +1,36 @@
+=== tb_pheap: seed=505 quick=0 ===
+[60000] TEST: smoke: single insert/delete
+[800000] TEST: smoke: fill-drain 50, ascending keys
+[3010000] TEST: smoke: fill-drain 50, descending keys
+[5220000] TEST: smoke: duplicate keys and extremes
+[7850000] TEST: smoke: interleaved I/D no gaps
+[12210000] TEST: ready rules: empty/bubble/full
+[12650000] TEST: zard: I-I chase, descending back-to-back
+[16010000] TEST: azard: I-I chase, ascending back-to-back
+[19370000] TEST: le-D chase (Fig.6 pattern) and D-I chase
+[35720000] TEST:  insert-abort at every depth (gap sweep)
+[312800000] TEST: =0 delete chains across level boundaries
+[814660000] TEST: d: steal/late-write races, constant keys
+[835380000] TEST: anding exactly at delete (gap = depth-1)
+[1089900000] TEST:  to full (16383), verify full, drain all
+[1582520000] RANDOM: insert-heavy (70/20)
+  phase: 108191 ins 91809 del in 242641 cycles
+[4008930000] RANDOM: balanced (45/45)
+  phase: 150000 ins 150000 del in 408643 cycles
+[8095360000] RANDOM: delete-heavy (25/65)
+  phase: 91809 ins 108191 del in 366966 cycles
+[11765020000] RANDOM: narrow keys, balanced (45/45)
+  phase: 108191 ins 91809 del in 268343 cycles
+[14776450000] TEST: throughput: sustained insert (1/cycle)
+  insert-saturation: 10000 ops / 10000 cycles = 1.000000 ops/cycle
+[14878170000] TEST: : alternating delete/insert (1 op/cycle)
+  delete/insert alternation: 10000 ops / 10000 cycles = 1.000000 ops/cycle
+[14978170000] TEST: hput: sustained delete drain (0.5/cycle)
+  delete-saturation: 10000 ops / 19999 cycles = 0.500025 ops/cycle
+=============================================
+ total ops checked : 1050532
+ total cycles      : 1518088
+ errors            : 0
+ RESULT: PASS (seed=505)
+=============================================
+tb\tb_pheap.v:623: $finish called at 15180880000 (1ps)

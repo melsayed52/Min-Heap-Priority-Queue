@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Jul 20 20:39:15 2026
+# Process ID         : 19556
+# Current directory  : C:/Claude/Code/PQ
+# Command line       : vivado.exe -mode batch -source syn\vivado_ooc.tcl -nojournal -log syn\vivado_7z020.log -tclargs xc7z020clg400-1
+# Log file           : C:/Claude/Code/PQ/syn/vivado_7z020.log
+# Journal file       : 
+# Running On         : MLegion
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16935 MB
+# Swap memory        : 18253 MB
+# Total Virtual      : 35189 MB
+# Available Virtual  : 16633 MB
+#-----------------------------------------------------------
+source {syn\vivado_ooc.tcl}
+# set part xc7z020clg400-1
+# if { $argc >= 1 } { set part [lindex $argv 0] }
+# set outdir syn/out_[string map {: _} $part]
+# file mkdir $outdir
+# read_verilog rtl/ram_dp.v rtl/pheap.v
+read_verilog: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 492.996 ; gain = 210.621
+# read_xdc -mode out_of_context syn/timing.xdc
+# synth_design -top pheap -part $part -mode out_of_context
+Command: synth_design -top pheap -part xc7z020clg400-1 -mode out_of_context
+WARNING: [Device 21-436] No parts matched 'xc7z020clg400-1'
+0 Infos, 1 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-162] Invalid option value specified for '-part'.
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 20 20:39:31 2026...

@@ -1,0 +1,8 @@
+# yosys_check.ys - synthesizability sanity check (no latches, no sim-only constructs)
+read_verilog rtl/ram_dp.v rtl/pheap.v
+hierarchy -top pheap -check
+proc
+check
+opt -fast
+synth -top pheap -noabc
+stat

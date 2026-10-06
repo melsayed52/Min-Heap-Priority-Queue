@@ -1,0 +1,3003 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Jul 21 02:41:59 2026
+# Process ID         : 27332
+# Current directory  : C:/Claude/Code/PQ
+# Command line       : vivado.exe -mode batch -source syn\vivado_ooc_aggr.tcl -nojournal -log syn\log_k3_aggr_p54.log -tclargs xc7k160tfbg484-3 5.400
+# Log file           : C:/Claude/Code/PQ/syn/log_k3_aggr_p54.log
+# Journal file       : 
+# Running On         : MLegion
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16935 MB
+# Swap memory        : 21221 MB
+# Total Virtual      : 38157 MB
+# Available Virtual  : 4903 MB
+#-----------------------------------------------------------
+source {syn\vivado_ooc_aggr.tcl}
+# set part xc7z020clg400-1
+# set period 4.000
+# if { $argc >= 1 } { set part [lindex $argv 0] }
+# if { $argc >= 2 } { set period [lindex $argv 1] }
+# set outdir syn/out_aggr_[string map {: _} $part]_p[string map {. _} $period]
+# file mkdir $outdir
+# read_verilog rtl/ram_dp.v rtl/pheap.v
+read_verilog: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 491.535 ; gain = 212.082
+# set xdc [open $outdir/clk.xdc w]
+# puts $xdc "create_clock -period $period -name clk \[get_ports clk\]"
+# puts $xdc "set_input_delay  -clock clk 0.200 \[all_inputs\]"
+# puts $xdc "set_output_delay -clock clk 0.200 \[all_outputs\]"
+# close $xdc
+# read_xdc -mode out_of_context $outdir/clk.xdc
+# synth_design -top pheap -part $part -mode out_of_context \
+#     -retiming -flatten_hierarchy rebuilt
+WARNING: [Common 17-576] 'retiming' is deprecated. Please use -global_retiming option
+Command: synth_design -top pheap -part xc7k160tfbg484-3 -mode out_of_context -retiming -flatten_hierarchy rebuilt
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Device 21-403] Loading part xc7k160tfbg484-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29984
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1193.230 ; gain = 491.449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pheap' [C:/Claude/Code/PQ/rtl/pheap.v:20]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Claude/Code/PQ/rtl/pheap.v:666]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Claude/Code/PQ/rtl/pheap.v:667]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Claude/Code/PQ/rtl/pheap.v:603]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Claude/Code/PQ/rtl/pheap.v:695]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Claude/Code/PQ/rtl/pheap.v:696]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 2 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized0' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 3 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized0' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized1' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 4 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized1' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized2' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 5 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized2' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized3' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 6 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized3' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized4' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 7 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized4' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized5' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized5' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized6' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 9 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized6' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized7' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 10 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized7' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ram_dp__parameterized8' [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+	Parameter AW bound to: 11 - type: integer 
+	Parameter DW bound to: 48 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram_dp__parameterized8' (0#1) [C:/Claude/Code/PQ/rtl/ram_dp.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pheap' (0#1) [C:/Claude/Code/PQ/rtl/pheap.v:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1361.148 ; gain = 659.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1361.148 ; gain = 659.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1361.148 ; gain = 659.367
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 1361.148 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc:2]
+Finished Parsing XDC File [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1449.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1449.262 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1449.262 ; gain = 747.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1449.262 ; gain = 747.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1449.262 ; gain = 747.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1475.473 ; gain = 773.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 25    
+	   2 Input   15 Bit       Adders := 6     
+	   3 Input   15 Bit       Adders := 1     
+	   4 Input   15 Bit       Adders := 1     
+	   3 Input   13 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	              720 Bit    Registers := 3     
+	              384 Bit    Registers := 1     
+	              225 Bit    Registers := 1     
+	              192 Bit    Registers := 1     
+	               96 Bit    Registers := 1     
+	               48 Bit    Registers := 131   
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 44    
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 5     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 18    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 55    
++---Multipliers : 
+	               6x32  Multipliers := 2     
++---RAMs : 
+	              96K Bit	(2048 X 48 bit)          RAMs := 4     
+	              48K Bit	(1024 X 48 bit)          RAMs := 4     
+	              24K Bit	(512 X 48 bit)          RAMs := 4     
+	              12K Bit	(256 X 48 bit)          RAMs := 4     
+	               6K Bit	(128 X 48 bit)          RAMs := 4     
+	               3K Bit	(64 X 48 bit)          RAMs := 4     
+	               1K Bit	(32 X 48 bit)          RAMs := 4     
+	              768 Bit	(16 X 48 bit)          RAMs := 4     
+	              384 Bit	(8 X 48 bit)          RAMs := 4     
+	              192 Bit	(4 X 48 bit)          RAMs := 4     
++---Muxes : 
+	   2 Input  384 Bit        Muxes := 1     
+	   2 Input  192 Bit        Muxes := 1     
+	   2 Input   96 Bit        Muxes := 1     
+	   4 Input   48 Bit        Muxes := 13    
+	   2 Input   48 Bit        Muxes := 256   
+	   2 Input   15 Bit        Muxes := 11    
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 57    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM g_ram[13].g_bank[0].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM g_ram[13].g_bank[1].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM g_ram[13].g_bank[2].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM g_ram[13].g_bank[3].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 3 RAM instances of RAM g_ram[14].g_bank[0].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 3 RAM instances of RAM g_ram[14].g_bank[1].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 3 RAM instances of RAM g_ram[14].g_bank[2].u_bank/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 3 RAM instances of RAM g_ram[14].g_bank[3].u_bank/mem_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[336]' (FD) to 'cwr_reg[336]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[337]' (FD) to 'cwr_reg[337]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[338]' (FD) to 'cwr_reg[338]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[339]' (FD) to 'cwr_reg[339]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[340]' (FD) to 'cwr_reg[340]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[341]' (FD) to 'cwr_reg[341]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[342]' (FD) to 'cwr_reg[342]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[343]' (FD) to 'cwr_reg[343]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[344]' (FD) to 'cwr_reg[344]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[345]' (FD) to 'cwr_reg[345]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[346]' (FD) to 'cwr_reg[346]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[347]' (FD) to 'cwr_reg[347]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[348]' (FD) to 'cwr_reg[348]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[349]' (FD) to 'cwr_reg[349]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[350]' (FD) to 'cwr_reg[350]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[351]' (FD) to 'cwr_reg[351]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[352]' (FD) to 'cwr_reg[352]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[353]' (FD) to 'cwr_reg[353]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[354]' (FD) to 'cwr_reg[354]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[355]' (FD) to 'cwr_reg[355]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[356]' (FD) to 'cwr_reg[356]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[357]' (FD) to 'cwr_reg[357]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[358]' (FD) to 'cwr_reg[358]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[359]' (FD) to 'cwr_reg[359]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[360]' (FD) to 'cwr_reg[360]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[361]' (FD) to 'cwr_reg[361]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[362]' (FD) to 'cwr_reg[362]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[363]' (FD) to 'cwr_reg[363]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[364]' (FD) to 'cwr_reg[364]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[365]' (FD) to 'cwr_reg[365]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[366]' (FD) to 'cwr_reg[366]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[367]' (FD) to 'cwr_reg[367]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[368]' (FD) to 'cwr_reg[368]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[369]' (FD) to 'cwr_reg[369]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[370]' (FD) to 'cwr_reg[370]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[371]' (FD) to 'cwr_reg[371]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[372]' (FD) to 'cwr_reg[372]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[373]' (FD) to 'cwr_reg[373]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[374]' (FD) to 'cwr_reg[374]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[375]' (FD) to 'cwr_reg[375]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[376]' (FD) to 'cwr_reg[376]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[377]' (FD) to 'cwr_reg[377]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[378]' (FD) to 'cwr_reg[378]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[379]' (FD) to 'cwr_reg[379]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[380]' (FD) to 'cwr_reg[380]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[381]' (FD) to 'cwr_reg[381]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[382]' (FD) to 'cwr_reg[382]'
+INFO: [Synth 8-3886] merging instance 'g_st[7].ins_w_r_reg[383]' (FD) to 'cwr_reg[383]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[96]' (FD) to 'cwr_reg[96]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[97]' (FD) to 'cwr_reg[97]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[98]' (FD) to 'cwr_reg[98]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[99]' (FD) to 'cwr_reg[99]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[100]' (FD) to 'cwr_reg[100]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[101]' (FD) to 'cwr_reg[101]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[102]' (FD) to 'cwr_reg[102]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[103]' (FD) to 'cwr_reg[103]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[104]' (FD) to 'cwr_reg[104]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[105]' (FD) to 'cwr_reg[105]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[106]' (FD) to 'cwr_reg[106]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[107]' (FD) to 'cwr_reg[107]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[108]' (FD) to 'cwr_reg[108]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[109]' (FD) to 'cwr_reg[109]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[110]' (FD) to 'cwr_reg[110]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[111]' (FD) to 'cwr_reg[111]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[112]' (FD) to 'cwr_reg[112]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[113]' (FD) to 'cwr_reg[113]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[114]' (FD) to 'cwr_reg[114]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[115]' (FD) to 'cwr_reg[115]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[116]' (FD) to 'cwr_reg[116]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[117]' (FD) to 'cwr_reg[117]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[118]' (FD) to 'cwr_reg[118]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[119]' (FD) to 'cwr_reg[119]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[120]' (FD) to 'cwr_reg[120]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[121]' (FD) to 'cwr_reg[121]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[122]' (FD) to 'cwr_reg[122]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[123]' (FD) to 'cwr_reg[123]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[124]' (FD) to 'cwr_reg[124]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[125]' (FD) to 'cwr_reg[125]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[126]' (FD) to 'cwr_reg[126]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[127]' (FD) to 'cwr_reg[127]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[128]' (FD) to 'cwr_reg[128]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[129]' (FD) to 'cwr_reg[129]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[130]' (FD) to 'cwr_reg[130]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[131]' (FD) to 'cwr_reg[131]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[132]' (FD) to 'cwr_reg[132]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[133]' (FD) to 'cwr_reg[133]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[134]' (FD) to 'cwr_reg[134]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[135]' (FD) to 'cwr_reg[135]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[136]' (FD) to 'cwr_reg[136]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[137]' (FD) to 'cwr_reg[137]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[138]' (FD) to 'cwr_reg[138]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[139]' (FD) to 'cwr_reg[139]'
+INFO: [Synth 8-3886] merging instance 'g_st[2].ins_w_r_reg[140]' (FD) to 'cwr_reg[140]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design pheap__GB9 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design pheap__GB9 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design pheap__GB9 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design pheap__GB9 has port P[0] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'g_ram[8].h0vq_reg' (FDR) to 'gwr_v_reg[8]'
+INFO: [Synth 8-3886] merging instance 'g_ram[9].h0vq_reg' (FDR) to 'gwr_v_reg[9]'
+INFO: [Synth 8-3886] merging instance 'g_ram[10].h0vq_reg' (FDR) to 'gwr_v_reg[10]'
+INFO: [Synth 8-3886] merging instance 'g_ram[11].h0vq_reg' (FDR) to 'gwr_v_reg[11]'
+INFO: [Synth 8-3886] merging instance 'g_ram[12].h0vq_reg' (FDR) to 'gwr_v_reg[12]'
+INFO: [Synth 8-3886] merging instance 'g_ram[13].h0vq_reg' (FDR) to 'gwr_v_reg[13]'
+INFO: [Synth 8-3886] merging instance 'gwr_v_reg[14]' (FDR) to 'g_ram[14].h0vq_reg'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gwr_a_reg[223] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gwr_a_reg[224] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\g_st[3].del_n_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\g_st[2].del_n_r_reg[31] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:34 . Memory (MB): peak = 1729.215 ; gain = 1027.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|pheap__GB0  | g_ram[8].g_bank[0].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[8].g_bank[1].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[8].g_bank[2].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[8].g_bank[3].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[0].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[1].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[2].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[3].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[0].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[1].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[2].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[3].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[0].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[1].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[2].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[3].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[0].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[1].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[2].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[3].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[0].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[1].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[2].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[3].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[14].g_bank[0].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|pheap__GB0  | g_ram[14].g_bank[1].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|pheap__GB0  | g_ram[14].g_bank[2].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|pheap__GB0  | g_ram[14].g_bank[3].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                        | Inference | Size (Depth x Width) | Primitives  | 
++------------+-----------------------------------+-----------+----------------------+-------------+
+|pheap__GB0  | g_ram[5].g_bank[0].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[1].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[2].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[3].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[0].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[1].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[2].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[3].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[1].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[2].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[3].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[0].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
++------------+-----------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 1826.020 ; gain = 1124.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:02 ; elapsed = 00:03:30 . Memory (MB): peak = 2016.215 ; gain = 1314.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|pheap__GB0  | g_ram[14].g_bank[1].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|pheap__GB0  | g_ram[14].g_bank[2].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|pheap__GB0  | g_ram[14].g_bank[3].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|pheap__GB0  | g_ram[8].g_bank[0].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[8].g_bank[1].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[8].g_bank[2].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[8].g_bank[3].u_bank/mem_reg  | 32 x 48(READ_FIRST)    | W |   | 32 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[0].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[1].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[2].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[9].g_bank[3].u_bank/mem_reg  | 64 x 48(READ_FIRST)    | W |   | 64 x 48(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[0].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[1].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[2].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[10].g_bank[3].u_bank/mem_reg | 128 x 48(READ_FIRST)   | W |   | 128 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[0].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[1].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[2].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[11].g_bank[3].u_bank/mem_reg | 256 x 48(READ_FIRST)   | W |   | 256 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[0].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[1].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[2].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[12].g_bank[3].u_bank/mem_reg | 512 x 48(READ_FIRST)   | W |   | 512 x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[0].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[1].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[2].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[13].g_bank[3].u_bank/mem_reg | 1 K x 48(READ_FIRST)   | W |   | 1 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|pheap__GB0  | g_ram[14].g_bank[0].u_bank/mem_reg | 2 K x 48(READ_FIRST)   | W |   | 2 K x 48(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
++------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+-----------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                        | Inference | Size (Depth x Width) | Primitives  | 
++------------+-----------------------------------+-----------+----------------------+-------------+
+|pheap__GB0  | g_ram[7].g_bank[1].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[2].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[3].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[7].g_bank[0].u_bank/mem_reg | Implied   | 16 x 48              | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[1].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[2].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[3].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[0].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[1].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[2].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[5].g_bank[3].u_bank/mem_reg | Implied   | 4 x 48               | RAM32M x 8  | 
+|pheap__GB0  | g_ram[6].g_bank[0].u_bank/mem_reg | Implied   | 8 x 48               | RAM32M x 8  | 
++------------+-----------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `case__186_pheap__GD`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `case__186_pheap__GD' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB4`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB4' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB5`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB5' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB6`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB6' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB7`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `pheap__GB7' done
+
+
+INFO: [Synth 8-5816] Retiming module `case__187_pheap__GD`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `case__187_pheap__GD' done
+
+
+INFO: [Synth 8-5816] Retiming module `case__188_pheap__GD`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `case__188_pheap__GD' done
+
+
+INFO: [Synth 8-5816] Retiming module `case__189_pheap__GD`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `case__189_pheap__GD' done
+
+
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2764
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2767
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2770
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2773
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2776
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2779
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2782
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2785
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2788
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2791
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2794
+RETIMING: forward move fails for register i_0/count_r_reg[0] along load instance i_0/i_2796
+INFO: [Synth 8-5816] Retiming module `pheap_GT0`
+	Numbers of forward move = 3, and backward move = 242
+
+	Retimed registers names:
+		i_0/count_r_reg[10]_fret
+		i_0/count_r_reg[2]_fret
+		i_0/count_r_reg[2]_fret_fret
+		i_0/refill_r_reg[0]_bret__0
+		i_0/refill_r_reg[0]_bret_bret
+		i_0/refill_r_reg[0]_bret_bret__0
+		i_0/refill_r_reg[0]_bret_bret__1
+		i_0/refill_r_reg[0]_bret_bret__10
+		i_0/refill_r_reg[0]_bret_bret__11
+		i_0/refill_r_reg[0]_bret_bret__12
+		i_0/refill_r_reg[0]_bret_bret__13
+		i_0/refill_r_reg[0]_bret_bret__14
+		i_0/refill_r_reg[0]_bret_bret__15
+		i_0/refill_r_reg[0]_bret_bret__16
+		i_0/refill_r_reg[0]_bret_bret__17
+		i_0/refill_r_reg[0]_bret_bret__3
+		i_0/refill_r_reg[0]_bret_bret__4
+		i_0/refill_r_reg[0]_bret_bret__5
+		i_0/refill_r_reg[0]_bret_bret__6
+		i_0/refill_r_reg[0]_bret_bret__7
+		i_0/refill_r_reg[0]_bret_bret__8
+		i_0/refill_r_reg[0]_bret_bret__9
+		i_0/refill_r_reg[10]_bret
+		i_0/refill_r_reg[10]_bret_bret
+		i_0/refill_r_reg[10]_bret_bret__0
+		i_0/refill_r_reg[10]_bret_bret__1
+		i_0/refill_r_reg[10]_bret_bret__10
+		i_0/refill_r_reg[10]_bret_bret__11
+		i_0/refill_r_reg[10]_bret_bret__12
+		i_0/refill_r_reg[10]_bret_bret__13
+		i_0/refill_r_reg[10]_bret_bret__14
+		i_0/refill_r_reg[10]_bret_bret__15
+		i_0/refill_r_reg[10]_bret_bret__16
+		i_0/refill_r_reg[10]_bret_bret__17
+		i_0/refill_r_reg[10]_bret_bret__3
+		i_0/refill_r_reg[10]_bret_bret__4
+		i_0/refill_r_reg[10]_bret_bret__5
+		i_0/refill_r_reg[10]_bret_bret__6
+		i_0/refill_r_reg[10]_bret_bret__7
+		i_0/refill_r_reg[10]_bret_bret__8
+		i_0/refill_r_reg[10]_bret_bret__9
+		i_0/refill_r_reg[11]_bret
+		i_0/refill_r_reg[11]_bret_bret
+		i_0/refill_r_reg[11]_bret_bret__0
+		i_0/refill_r_reg[11]_bret_bret__1
+		i_0/refill_r_reg[11]_bret_bret__10
+		i_0/refill_r_reg[11]_bret_bret__11
+		i_0/refill_r_reg[11]_bret_bret__12
+		i_0/refill_r_reg[11]_bret_bret__13
+		i_0/refill_r_reg[11]_bret_bret__14
+		i_0/refill_r_reg[11]_bret_bret__15
+		i_0/refill_r_reg[11]_bret_bret__16
+		i_0/refill_r_reg[11]_bret_bret__17
+		i_0/refill_r_reg[11]_bret_bret__3
+		i_0/refill_r_reg[11]_bret_bret__4
+		i_0/refill_r_reg[11]_bret_bret__5
+		i_0/refill_r_reg[11]_bret_bret__6
+		i_0/refill_r_reg[11]_bret_bret__7
+		i_0/refill_r_reg[11]_bret_bret__8
+		i_0/refill_r_reg[11]_bret_bret__9
+		i_0/refill_r_reg[12]_bret__4
+		i_0/refill_r_reg[12]_bret_bret
+		i_0/refill_r_reg[12]_bret_bret__0
+		i_0/refill_r_reg[12]_bret_bret__1
+		i_0/refill_r_reg[12]_bret_bret__10
+		i_0/refill_r_reg[12]_bret_bret__11
+		i_0/refill_r_reg[12]_bret_bret__12
+		i_0/refill_r_reg[12]_bret_bret__13
+		i_0/refill_r_reg[12]_bret_bret__14
+		i_0/refill_r_reg[12]_bret_bret__15
+		i_0/refill_r_reg[12]_bret_bret__16
+		i_0/refill_r_reg[12]_bret_bret__17
+		i_0/refill_r_reg[12]_bret_bret__3
+		i_0/refill_r_reg[12]_bret_bret__4
+		i_0/refill_r_reg[12]_bret_bret__5
+		i_0/refill_r_reg[12]_bret_bret__6
+		i_0/refill_r_reg[12]_bret_bret__7
+		i_0/refill_r_reg[12]_bret_bret__8
+		i_0/refill_r_reg[12]_bret_bret__9
+		i_0/refill_r_reg[13]_bret
+		i_0/refill_r_reg[13]_bret_bret
+		i_0/refill_r_reg[13]_bret_bret__0
+		i_0/refill_r_reg[13]_bret_bret__1
+		i_0/refill_r_reg[13]_bret_bret__10
+		i_0/refill_r_reg[13]_bret_bret__11
+		i_0/refill_r_reg[13]_bret_bret__12
+		i_0/refill_r_reg[13]_bret_bret__13
+		i_0/refill_r_reg[13]_bret_bret__14
+		i_0/refill_r_reg[13]_bret_bret__15
+		i_0/refill_r_reg[13]_bret_bret__16
+		i_0/refill_r_reg[13]_bret_bret__17
+		i_0/refill_r_reg[13]_bret_bret__3
+		i_0/refill_r_reg[13]_bret_bret__4
+		i_0/refill_r_reg[13]_bret_bret__5
+		i_0/refill_r_reg[13]_bret_bret__6
+		i_0/refill_r_reg[13]_bret_bret__7
+		i_0/refill_r_reg[13]_bret_bret__8
+		i_0/refill_r_reg[13]_bret_bret__9
+		i_0/refill_r_reg[14]_bret
+		i_0/refill_r_reg[14]_bret_bret
+		i_0/refill_r_reg[14]_bret_bret__0
+		i_0/refill_r_reg[14]_bret_bret__1
+		i_0/refill_r_reg[14]_bret_bret__10
+		i_0/refill_r_reg[14]_bret_bret__11
+		i_0/refill_r_reg[14]_bret_bret__12
+		i_0/refill_r_reg[14]_bret_bret__13
+		i_0/refill_r_reg[14]_bret_bret__14
+		i_0/refill_r_reg[14]_bret_bret__15
+		i_0/refill_r_reg[14]_bret_bret__16
+		i_0/refill_r_reg[14]_bret_bret__17
+		i_0/refill_r_reg[14]_bret_bret__3
+		i_0/refill_r_reg[14]_bret_bret__4
+		i_0/refill_r_reg[14]_bret_bret__5
+		i_0/refill_r_reg[14]_bret_bret__6
+		i_0/refill_r_reg[14]_bret_bret__7
+		i_0/refill_r_reg[14]_bret_bret__8
+		i_0/refill_r_reg[14]_bret_bret__9
+		i_0/refill_r_reg[15]_bret
+		i_0/refill_r_reg[15]_bret_bret
+		i_0/refill_r_reg[15]_bret_bret__0
+		i_0/refill_r_reg[15]_bret_bret__1
+		i_0/refill_r_reg[15]_bret_bret__10
+		i_0/refill_r_reg[15]_bret_bret__11
+		i_0/refill_r_reg[15]_bret_bret__12
+		i_0/refill_r_reg[15]_bret_bret__13
+		i_0/refill_r_reg[15]_bret_bret__14
+		i_0/refill_r_reg[15]_bret_bret__15
+		i_0/refill_r_reg[15]_bret_bret__16
+		i_0/refill_r_reg[15]_bret_bret__17
+		i_0/refill_r_reg[15]_bret_bret__3
+		i_0/refill_r_reg[15]_bret_bret__4
+		i_0/refill_r_reg[15]_bret_bret__5
+		i_0/refill_r_reg[15]_bret_bret__6
+		i_0/refill_r_reg[15]_bret_bret__7
+		i_0/refill_r_reg[15]_bret_bret__8
+		i_0/refill_r_reg[15]_bret_bret__9
+		i_0/refill_r_reg[16]_bret
+		i_0/refill_r_reg[16]_bret_bret
+		i_0/refill_r_reg[16]_bret_bret__0
+		i_0/refill_r_reg[16]_bret_bret__1
+		i_0/refill_r_reg[16]_bret_bret__10
+		i_0/refill_r_reg[16]_bret_bret__11
+		i_0/refill_r_reg[16]_bret_bret__12
+		i_0/refill_r_reg[16]_bret_bret__13
+		i_0/refill_r_reg[16]_bret_bret__14
+		i_0/refill_r_reg[16]_bret_bret__15
+		i_0/refill_r_reg[16]_bret_bret__16
+		i_0/refill_r_reg[16]_bret_bret__17
+		i_0/refill_r_reg[16]_bret_bret__3
+		i_0/refill_r_reg[16]_bret_bret__4
+		i_0/refill_r_reg[16]_bret_bret__5
+		i_0/refill_r_reg[16]_bret_bret__6
+		i_0/refill_r_reg[16]_bret_bret__7
+		i_0/refill_r_reg[16]_bret_bret__8
+		i_0/refill_r_reg[16]_bret_bret__9
+		i_0/refill_r_reg[17]_bret
+		i_0/refill_r_reg[17]_bret_bret
+		i_0/refill_r_reg[17]_bret_bret__0
+		i_0/refill_r_reg[17]_bret_bret__1
+		i_0/refill_r_reg[17]_bret_bret__10
+		i_0/refill_r_reg[17]_bret_bret__11
+		i_0/refill_r_reg[17]_bret_bret__12
+		i_0/refill_r_reg[17]_bret_bret__13
+		i_0/refill_r_reg[17]_bret_bret__14
+		i_0/refill_r_reg[17]_bret_bret__15
+		i_0/refill_r_reg[17]_bret_bret__16
+		i_0/refill_r_reg[17]_bret_bret__17
+		i_0/refill_r_reg[17]_bret_bret__3
+		i_0/refill_r_reg[17]_bret_bret__4
+		i_0/refill_r_reg[17]_bret_bret__5
+		i_0/refill_r_reg[17]_bret_bret__6
+		i_0/refill_r_reg[17]_bret_bret__7
+		i_0/refill_r_reg[17]_bret_bret__8
+		i_0/refill_r_reg[17]_bret_bret__9
+		i_0/refill_r_reg[18]_bret
+		i_0/refill_r_reg[18]_bret_bret
+		i_0/refill_r_reg[18]_bret_bret__0
+		i_0/refill_r_reg[18]_bret_bret__1
+		i_0/refill_r_reg[18]_bret_bret__10
+		i_0/refill_r_reg[18]_bret_bret__11
+		i_0/refill_r_reg[18]_bret_bret__12
+		i_0/refill_r_reg[18]_bret_bret__13
+		i_0/refill_r_reg[18]_bret_bret__14
+		i_0/refill_r_reg[18]_bret_bret__15
+		i_0/refill_r_reg[18]_bret_bret__16
+		i_0/refill_r_reg[18]_bret_bret__17
+		i_0/refill_r_reg[18]_bret_bret__3
+		i_0/refill_r_reg[18]_bret_bret__4
+		i_0/refill_r_reg[18]_bret_bret__5
+		i_0/refill_r_reg[18]_bret_bret__6
+		i_0/refill_r_reg[18]_bret_bret__7
+		i_0/refill_r_reg[18]_bret_bret__8
+		i_0/refill_r_reg[18]_bret_bret__9
+		i_0/refill_r_reg[19]_bret__4
+		i_0/refill_r_reg[19]_bret_bret
+		i_0/refill_r_reg[19]_bret_bret__0
+		i_0/refill_r_reg[19]_bret_bret__1
+		i_0/refill_r_reg[19]_bret_bret__10
+		i_0/refill_r_reg[19]_bret_bret__11
+		i_0/refill_r_reg[19]_bret_bret__12
+		i_0/refill_r_reg[19]_bret_bret__13
+		i_0/refill_r_reg[19]_bret_bret__14
+		i_0/refill_r_reg[19]_bret_bret__15
+		i_0/refill_r_reg[19]_bret_bret__16
+		i_0/refill_r_reg[19]_bret_bret__17
+		i_0/refill_r_reg[19]_bret_bret__3
+		i_0/refill_r_reg[19]_bret_bret__4
+		i_0/refill_r_reg[19]_bret_bret__5
+		i_0/refill_r_reg[19]_bret_bret__6
+		i_0/refill_r_reg[19]_bret_bret__7
+		i_0/refill_r_reg[19]_bret_bret__8
+		i_0/refill_r_reg[19]_bret_bret__9
+		i_0/refill_r_reg[1]_bret
+		i_0/refill_r_reg[1]_bret_bret
+		i_0/refill_r_reg[1]_bret_bret__0
+		i_0/refill_r_reg[1]_bret_bret__1
+		i_0/refill_r_reg[1]_bret_bret__10
+		i_0/refill_r_reg[1]_bret_bret__11
+		i_0/refill_r_reg[1]_bret_bret__12
+		i_0/refill_r_reg[1]_bret_bret__13
+		i_0/refill_r_reg[1]_bret_bret__14
+		i_0/refill_r_reg[1]_bret_bret__15
+		i_0/refill_r_reg[1]_bret_bret__16
+		i_0/refill_r_reg[1]_bret_bret__17
+		i_0/refill_r_reg[1]_bret_bret__3
+		i_0/refill_r_reg[1]_bret_bret__4
+		i_0/refill_r_reg[1]_bret_bret__5
+		i_0/refill_r_reg[1]_bret_bret__6
+		i_0/refill_r_reg[1]_bret_bret__7
+		i_0/refill_r_reg[1]_bret_bret__8
+		i_0/refill_r_reg[1]_bret_bret__9
+		i_0/refill_r_reg[20]_bret__0
+		i_0/refill_r_reg[20]_bret_bret
+		i_0/refill_r_reg[20]_bret_bret__0
+		i_0/refill_r_reg[20]_bret_bret__1
+		i_0/refill_r_reg[20]_bret_bret__10
+		i_0/refill_r_reg[20]_bret_bret__11
+		i_0/refill_r_reg[20]_bret_bret__12
+		i_0/refill_r_reg[20]_bret_bret__13
+		i_0/refill_r_reg[20]_bret_bret__14
+		i_0/refill_r_reg[20]_bret_bret__15
+		i_0/refill_r_reg[20]_bret_bret__16
+		i_0/refill_r_reg[20]_bret_bret__17
+		i_0/refill_r_reg[20]_bret_bret__3
+		i_0/refill_r_reg[20]_bret_bret__4
+		i_0/refill_r_reg[20]_bret_bret__5
+		i_0/refill_r_reg[20]_bret_bret__6
+		i_0/refill_r_reg[20]_bret_bret__7
+		i_0/refill_r_reg[20]_bret_bret__8
+		i_0/refill_r_reg[20]_bret_bret__9
+		i_0/refill_r_reg[21]_bret__0
+		i_0/refill_r_reg[21]_bret_bret
+		i_0/refill_r_reg[21]_bret_bret__0
+		i_0/refill_r_reg[21]_bret_bret__1
+		i_0/refill_r_reg[21]_bret_bret__10
+		i_0/refill_r_reg[21]_bret_bret__11
+		i_0/refill_r_reg[21]_bret_bret__12
+		i_0/refill_r_reg[21]_bret_bret__13
+		i_0/refill_r_reg[21]_bret_bret__14
+		i_0/refill_r_reg[21]_bret_bret__15
+		i_0/refill_r_reg[21]_bret_bret__16
+		i_0/refill_r_reg[21]_bret_bret__17
+		i_0/refill_r_reg[21]_bret_bret__3
+		i_0/refill_r_reg[21]_bret_bret__4
+		i_0/refill_r_reg[21]_bret_bret__5
+		i_0/refill_r_reg[21]_bret_bret__6
+		i_0/refill_r_reg[21]_bret_bret__7
+		i_0/refill_r_reg[21]_bret_bret__8
+		i_0/refill_r_reg[21]_bret_bret__9
+		i_0/refill_r_reg[22]_bret
+		i_0/refill_r_reg[22]_bret_bret
+		i_0/refill_r_reg[22]_bret_bret__0
+		i_0/refill_r_reg[22]_bret_bret__1
+		i_0/refill_r_reg[22]_bret_bret__10
+		i_0/refill_r_reg[22]_bret_bret__11
+		i_0/refill_r_reg[22]_bret_bret__12
+		i_0/refill_r_reg[22]_bret_bret__13
+		i_0/refill_r_reg[22]_bret_bret__14
+		i_0/refill_r_reg[22]_bret_bret__15
+		i_0/refill_r_reg[22]_bret_bret__16
+		i_0/refill_r_reg[22]_bret_bret__17
+		i_0/refill_r_reg[22]_bret_bret__3
+		i_0/refill_r_reg[22]_bret_bret__4
+		i_0/refill_r_reg[22]_bret_bret__5
+		i_0/refill_r_reg[22]_bret_bret__6
+		i_0/refill_r_reg[22]_bret_bret__7
+		i_0/refill_r_reg[22]_bret_bret__8
+		i_0/refill_r_reg[22]_bret_bret__9
+		i_0/refill_r_reg[23]_bret
+		i_0/refill_r_reg[23]_bret_bret
+		i_0/refill_r_reg[23]_bret_bret__0
+		i_0/refill_r_reg[23]_bret_bret__1
+		i_0/refill_r_reg[23]_bret_bret__10
+		i_0/refill_r_reg[23]_bret_bret__11
+		i_0/refill_r_reg[23]_bret_bret__12
+		i_0/refill_r_reg[23]_bret_bret__13
+		i_0/refill_r_reg[23]_bret_bret__14
+		i_0/refill_r_reg[23]_bret_bret__15
+		i_0/refill_r_reg[23]_bret_bret__16
+		i_0/refill_r_reg[23]_bret_bret__17
+		i_0/refill_r_reg[23]_bret_bret__3
+		i_0/refill_r_reg[23]_bret_bret__4
+		i_0/refill_r_reg[23]_bret_bret__5
+		i_0/refill_r_reg[23]_bret_bret__6
+		i_0/refill_r_reg[23]_bret_bret__7
+		i_0/refill_r_reg[23]_bret_bret__8
+		i_0/refill_r_reg[23]_bret_bret__9
+		i_0/refill_r_reg[24]_bret
+		i_0/refill_r_reg[24]_bret_bret
+		i_0/refill_r_reg[24]_bret_bret__0
+		i_0/refill_r_reg[24]_bret_bret__1
+		i_0/refill_r_reg[24]_bret_bret__10
+		i_0/refill_r_reg[24]_bret_bret__11
+		i_0/refill_r_reg[24]_bret_bret__12
+		i_0/refill_r_reg[24]_bret_bret__13
+		i_0/refill_r_reg[24]_bret_bret__14
+		i_0/refill_r_reg[24]_bret_bret__15
+		i_0/refill_r_reg[24]_bret_bret__16
+		i_0/refill_r_reg[24]_bret_bret__17
+		i_0/refill_r_reg[24]_bret_bret__3
+		i_0/refill_r_reg[24]_bret_bret__4
+		i_0/refill_r_reg[24]_bret_bret__5
+		i_0/refill_r_reg[24]_bret_bret__6
+		i_0/refill_r_reg[24]_bret_bret__7
+		i_0/refill_r_reg[24]_bret_bret__8
+		i_0/refill_r_reg[24]_bret_bret__9
+		i_0/refill_r_reg[25]_bret
+		i_0/refill_r_reg[25]_bret_bret
+		i_0/refill_r_reg[25]_bret_bret__0
+		i_0/refill_r_reg[25]_bret_bret__1
+		i_0/refill_r_reg[25]_bret_bret__10
+		i_0/refill_r_reg[25]_bret_bret__11
+		i_0/refill_r_reg[25]_bret_bret__12
+		i_0/refill_r_reg[25]_bret_bret__13
+		i_0/refill_r_reg[25]_bret_bret__14
+		i_0/refill_r_reg[25]_bret_bret__15
+		i_0/refill_r_reg[25]_bret_bret__16
+		i_0/refill_r_reg[25]_bret_bret__17
+		i_0/refill_r_reg[25]_bret_bret__3
+		i_0/refill_r_reg[25]_bret_bret__4
+		i_0/refill_r_reg[25]_bret_bret__5
+		i_0/refill_r_reg[25]_bret_bret__6
+		i_0/refill_r_reg[25]_bret_bret__7
+		i_0/refill_r_reg[25]_bret_bret__8
+		i_0/refill_r_reg[25]_bret_bret__9
+		i_0/refill_r_reg[26]_bret
+		i_0/refill_r_reg[26]_bret_bret
+		i_0/refill_r_reg[26]_bret_bret__0
+		i_0/refill_r_reg[26]_bret_bret__1
+		i_0/refill_r_reg[26]_bret_bret__10
+		i_0/refill_r_reg[26]_bret_bret__11
+		i_0/refill_r_reg[26]_bret_bret__12
+		i_0/refill_r_reg[26]_bret_bret__13
+		i_0/refill_r_reg[26]_bret_bret__14
+		i_0/refill_r_reg[26]_bret_bret__15
+		i_0/refill_r_reg[26]_bret_bret__16
+		i_0/refill_r_reg[26]_bret_bret__17
+		i_0/refill_r_reg[26]_bret_bret__3
+		i_0/refill_r_reg[26]_bret_bret__4
+		i_0/refill_r_reg[26]_bret_bret__5
+		i_0/refill_r_reg[26]_bret_bret__6
+		i_0/refill_r_reg[26]_bret_bret__7
+		i_0/refill_r_reg[26]_bret_bret__8
+		i_0/refill_r_reg[26]_bret_bret__9
+		i_0/refill_r_reg[27]_bret
+		i_0/refill_r_reg[27]_bret_bret
+		i_0/refill_r_reg[27]_bret_bret__0
+		i_0/refill_r_reg[27]_bret_bret__1
+		i_0/refill_r_reg[27]_bret_bret__10
+		i_0/refill_r_reg[27]_bret_bret__11
+		i_0/refill_r_reg[27]_bret_bret__12
+		i_0/refill_r_reg[27]_bret_bret__13
+		i_0/refill_r_reg[27]_bret_bret__14
+		i_0/refill_r_reg[27]_bret_bret__15
+		i_0/refill_r_reg[27]_bret_bret__16
+		i_0/refill_r_reg[27]_bret_bret__17
+		i_0/refill_r_reg[27]_bret_bret__3
+		i_0/refill_r_reg[27]_bret_bret__4
+		i_0/refill_r_reg[27]_bret_bret__5
+		i_0/refill_r_reg[27]_bret_bret__6
+		i_0/refill_r_reg[27]_bret_bret__7
+		i_0/refill_r_reg[27]_bret_bret__8
+		i_0/refill_r_reg[27]_bret_bret__9
+		i_0/refill_r_reg[28]_bret
+		i_0/refill_r_reg[28]_bret_bret
+		i_0/refill_r_reg[28]_bret_bret__0
+		i_0/refill_r_reg[28]_bret_bret__1
+		i_0/refill_r_reg[28]_bret_bret__10
+		i_0/refill_r_reg[28]_bret_bret__11
+		i_0/refill_r_reg[28]_bret_bret__12
+		i_0/refill_r_reg[28]_bret_bret__13
+		i_0/refill_r_reg[28]_bret_bret__14
+		i_0/refill_r_reg[28]_bret_bret__15
+		i_0/refill_r_reg[28]_bret_bret__16
+		i_0/refill_r_reg[28]_bret_bret__17
+		i_0/refill_r_reg[28]_bret_bret__3
+		i_0/refill_r_reg[28]_bret_bret__4
+		i_0/refill_r_reg[28]_bret_bret__5
+		i_0/refill_r_reg[28]_bret_bret__6
+		i_0/refill_r_reg[28]_bret_bret__7
+		i_0/refill_r_reg[28]_bret_bret__8
+		i_0/refill_r_reg[28]_bret_bret__9
+		i_0/refill_r_reg[29]_bret
+		i_0/refill_r_reg[29]_bret_bret
+		i_0/refill_r_reg[29]_bret_bret__0
+		i_0/refill_r_reg[29]_bret_bret__1
+		i_0/refill_r_reg[29]_bret_bret__10
+		i_0/refill_r_reg[29]_bret_bret__11
+		i_0/refill_r_reg[29]_bret_bret__12
+		i_0/refill_r_reg[29]_bret_bret__13
+		i_0/refill_r_reg[29]_bret_bret__14
+		i_0/refill_r_reg[29]_bret_bret__15
+		i_0/refill_r_reg[29]_bret_bret__16
+		i_0/refill_r_reg[29]_bret_bret__17
+		i_0/refill_r_reg[29]_bret_bret__3
+		i_0/refill_r_reg[29]_bret_bret__4
+		i_0/refill_r_reg[29]_bret_bret__5
+		i_0/refill_r_reg[29]_bret_bret__6
+		i_0/refill_r_reg[29]_bret_bret__7
+		i_0/refill_r_reg[29]_bret_bret__8
+		i_0/refill_r_reg[29]_bret_bret__9
+		i_0/refill_r_reg[2]_bret
+		i_0/refill_r_reg[2]_bret_bret
+		i_0/refill_r_reg[2]_bret_bret__0
+		i_0/refill_r_reg[2]_bret_bret__1
+		i_0/refill_r_reg[2]_bret_bret__10
+		i_0/refill_r_reg[2]_bret_bret__11
+		i_0/refill_r_reg[2]_bret_bret__12
+		i_0/refill_r_reg[2]_bret_bret__13
+		i_0/refill_r_reg[2]_bret_bret__14
+		i_0/refill_r_reg[2]_bret_bret__15
+		i_0/refill_r_reg[2]_bret_bret__16
+		i_0/refill_r_reg[2]_bret_bret__17
+		i_0/refill_r_reg[2]_bret_bret__3
+		i_0/refill_r_reg[2]_bret_bret__4
+		i_0/refill_r_reg[2]_bret_bret__5
+		i_0/refill_r_reg[2]_bret_bret__6
+		i_0/refill_r_reg[2]_bret_bret__7
+		i_0/refill_r_reg[2]_bret_bret__8
+		i_0/refill_r_reg[2]_bret_bret__9
+		i_0/refill_r_reg[30]_bret
+		i_0/refill_r_reg[30]_bret_bret
+		i_0/refill_r_reg[30]_bret_bret__0
+		i_0/refill_r_reg[30]_bret_bret__1
+		i_0/refill_r_reg[30]_bret_bret__10
+		i_0/refill_r_reg[30]_bret_bret__11
+		i_0/refill_r_reg[30]_bret_bret__12
+		i_0/refill_r_reg[30]_bret_bret__13
+		i_0/refill_r_reg[30]_bret_bret__14
+		i_0/refill_r_reg[30]_bret_bret__15
+		i_0/refill_r_reg[30]_bret_bret__16
+		i_0/refill_r_reg[30]_bret_bret__17
+		i_0/refill_r_reg[30]_bret_bret__3
+		i_0/refill_r_reg[30]_bret_bret__4
+		i_0/refill_r_reg[30]_bret_bret__5
+		i_0/refill_r_reg[30]_bret_bret__6
+		i_0/refill_r_reg[30]_bret_bret__7
+		i_0/refill_r_reg[30]_bret_bret__8
+		i_0/refill_r_reg[30]_bret_bret__9
+		i_0/refill_r_reg[31]_bret
+		i_0/refill_r_reg[31]_bret_bret
+		i_0/refill_r_reg[31]_bret_bret__0
+		i_0/refill_r_reg[31]_bret_bret__1
+		i_0/refill_r_reg[31]_bret_bret__10
+		i_0/refill_r_reg[31]_bret_bret__11
+		i_0/refill_r_reg[31]_bret_bret__12
+		i_0/refill_r_reg[31]_bret_bret__13
+		i_0/refill_r_reg[31]_bret_bret__14
+		i_0/refill_r_reg[31]_bret_bret__15
+		i_0/refill_r_reg[31]_bret_bret__16
+		i_0/refill_r_reg[31]_bret_bret__17
+		i_0/refill_r_reg[31]_bret_bret__3
+		i_0/refill_r_reg[31]_bret_bret__4
+		i_0/refill_r_reg[31]_bret_bret__5
+		i_0/refill_r_reg[31]_bret_bret__6
+		i_0/refill_r_reg[31]_bret_bret__7
+		i_0/refill_r_reg[31]_bret_bret__8
+		i_0/refill_r_reg[31]_bret_bret__9
+		i_0/refill_r_reg[32]_bret__0
+		i_0/refill_r_reg[32]_bret_bret
+		i_0/refill_r_reg[32]_bret_bret__0
+		i_0/refill_r_reg[32]_bret_bret__1
+		i_0/refill_r_reg[32]_bret_bret__10
+		i_0/refill_r_reg[32]_bret_bret__11
+		i_0/refill_r_reg[32]_bret_bret__12
+		i_0/refill_r_reg[32]_bret_bret__13
+		i_0/refill_r_reg[32]_bret_bret__14
+		i_0/refill_r_reg[32]_bret_bret__15
+		i_0/refill_r_reg[32]_bret_bret__16
+		i_0/refill_r_reg[32]_bret_bret__17
+		i_0/refill_r_reg[32]_bret_bret__3
+		i_0/refill_r_reg[32]_bret_bret__4
+		i_0/refill_r_reg[32]_bret_bret__5
+		i_0/refill_r_reg[32]_bret_bret__6
+		i_0/refill_r_reg[32]_bret_bret__7
+		i_0/refill_r_reg[32]_bret_bret__8
+		i_0/refill_r_reg[32]_bret_bret__9
+		i_0/refill_r_reg[33]_bret
+		i_0/refill_r_reg[33]_bret_bret
+		i_0/refill_r_reg[33]_bret_bret__0
+		i_0/refill_r_reg[33]_bret_bret__1
+		i_0/refill_r_reg[33]_bret_bret__10
+		i_0/refill_r_reg[33]_bret_bret__11
+		i_0/refill_r_reg[33]_bret_bret__12
+		i_0/refill_r_reg[33]_bret_bret__13
+		i_0/refill_r_reg[33]_bret_bret__14
+		i_0/refill_r_reg[33]_bret_bret__15
+		i_0/refill_r_reg[33]_bret_bret__16
+		i_0/refill_r_reg[33]_bret_bret__17
+		i_0/refill_r_reg[33]_bret_bret__3
+		i_0/refill_r_reg[33]_bret_bret__4
+		i_0/refill_r_reg[33]_bret_bret__5
+		i_0/refill_r_reg[33]_bret_bret__6
+		i_0/refill_r_reg[33]_bret_bret__7
+		i_0/refill_r_reg[33]_bret_bret__8
+		i_0/refill_r_reg[33]_bret_bret__9
+		i_0/refill_r_reg[34]_bret
+		i_0/refill_r_reg[34]_bret_bret
+		i_0/refill_r_reg[34]_bret_bret__0
+		i_0/refill_r_reg[34]_bret_bret__1
+		i_0/refill_r_reg[34]_bret_bret__10
+		i_0/refill_r_reg[34]_bret_bret__11
+		i_0/refill_r_reg[34]_bret_bret__12
+		i_0/refill_r_reg[34]_bret_bret__13
+		i_0/refill_r_reg[34]_bret_bret__14
+		i_0/refill_r_reg[34]_bret_bret__15
+		i_0/refill_r_reg[34]_bret_bret__16
+		i_0/refill_r_reg[34]_bret_bret__17
+		i_0/refill_r_reg[34]_bret_bret__3
+		i_0/refill_r_reg[34]_bret_bret__4
+		i_0/refill_r_reg[34]_bret_bret__5
+		i_0/refill_r_reg[34]_bret_bret__6
+		i_0/refill_r_reg[34]_bret_bret__7
+		i_0/refill_r_reg[34]_bret_bret__8
+		i_0/refill_r_reg[34]_bret_bret__9
+		i_0/refill_r_reg[35]_bret
+		i_0/refill_r_reg[35]_bret_bret
+		i_0/refill_r_reg[35]_bret_bret__0
+		i_0/refill_r_reg[35]_bret_bret__1
+		i_0/refill_r_reg[35]_bret_bret__10
+		i_0/refill_r_reg[35]_bret_bret__11
+		i_0/refill_r_reg[35]_bret_bret__12
+		i_0/refill_r_reg[35]_bret_bret__13
+		i_0/refill_r_reg[35]_bret_bret__14
+		i_0/refill_r_reg[35]_bret_bret__15
+		i_0/refill_r_reg[35]_bret_bret__16
+		i_0/refill_r_reg[35]_bret_bret__17
+		i_0/refill_r_reg[35]_bret_bret__3
+		i_0/refill_r_reg[35]_bret_bret__4
+		i_0/refill_r_reg[35]_bret_bret__5
+		i_0/refill_r_reg[35]_bret_bret__6
+		i_0/refill_r_reg[35]_bret_bret__7
+		i_0/refill_r_reg[35]_bret_bret__8
+		i_0/refill_r_reg[35]_bret_bret__9
+		i_0/refill_r_reg[36]_bret
+		i_0/refill_r_reg[36]_bret_bret
+		i_0/refill_r_reg[36]_bret_bret__0
+		i_0/refill_r_reg[36]_bret_bret__1
+		i_0/refill_r_reg[36]_bret_bret__10
+		i_0/refill_r_reg[36]_bret_bret__11
+		i_0/refill_r_reg[36]_bret_bret__12
+		i_0/refill_r_reg[36]_bret_bret__13
+		i_0/refill_r_reg[36]_bret_bret__14
+		i_0/refill_r_reg[36]_bret_bret__15
+		i_0/refill_r_reg[36]_bret_bret__16
+		i_0/refill_r_reg[36]_bret_bret__17
+		i_0/refill_r_reg[36]_bret_bret__3
+		i_0/refill_r_reg[36]_bret_bret__4
+		i_0/refill_r_reg[36]_bret_bret__5
+		i_0/refill_r_reg[36]_bret_bret__6
+		i_0/refill_r_reg[36]_bret_bret__7
+		i_0/refill_r_reg[36]_bret_bret__8
+		i_0/refill_r_reg[36]_bret_bret__9
+		i_0/refill_r_reg[37]_bret__0
+		i_0/refill_r_reg[37]_bret_bret
+		i_0/refill_r_reg[37]_bret_bret__0
+		i_0/refill_r_reg[37]_bret_bret__1
+		i_0/refill_r_reg[37]_bret_bret__10
+		i_0/refill_r_reg[37]_bret_bret__11
+		i_0/refill_r_reg[37]_bret_bret__12
+		i_0/refill_r_reg[37]_bret_bret__13
+		i_0/refill_r_reg[37]_bret_bret__14
+		i_0/refill_r_reg[37]_bret_bret__15
+		i_0/refill_r_reg[37]_bret_bret__16
+		i_0/refill_r_reg[37]_bret_bret__17
+		i_0/refill_r_reg[37]_bret_bret__3
+		i_0/refill_r_reg[37]_bret_bret__4
+		i_0/refill_r_reg[37]_bret_bret__5
+		i_0/refill_r_reg[37]_bret_bret__6
+		i_0/refill_r_reg[37]_bret_bret__7
+		i_0/refill_r_reg[37]_bret_bret__8
+		i_0/refill_r_reg[37]_bret_bret__9
+		i_0/refill_r_reg[38]_bret
+		i_0/refill_r_reg[38]_bret_bret
+		i_0/refill_r_reg[38]_bret_bret__0
+		i_0/refill_r_reg[38]_bret_bret__1
+		i_0/refill_r_reg[38]_bret_bret__10
+		i_0/refill_r_reg[38]_bret_bret__11
+		i_0/refill_r_reg[38]_bret_bret__12
+		i_0/refill_r_reg[38]_bret_bret__13
+		i_0/refill_r_reg[38]_bret_bret__14
+		i_0/refill_r_reg[38]_bret_bret__15
+		i_0/refill_r_reg[38]_bret_bret__16
+		i_0/refill_r_reg[38]_bret_bret__17
+		i_0/refill_r_reg[38]_bret_bret__3
+		i_0/refill_r_reg[38]_bret_bret__4
+		i_0/refill_r_reg[38]_bret_bret__5
+		i_0/refill_r_reg[38]_bret_bret__6
+		i_0/refill_r_reg[38]_bret_bret__7
+		i_0/refill_r_reg[38]_bret_bret__8
+		i_0/refill_r_reg[38]_bret_bret__9
+		i_0/refill_r_reg[39]_bret
+		i_0/refill_r_reg[39]_bret_bret
+		i_0/refill_r_reg[39]_bret_bret__0
+		i_0/refill_r_reg[39]_bret_bret__1
+		i_0/refill_r_reg[39]_bret_bret__10
+		i_0/refill_r_reg[39]_bret_bret__11
+		i_0/refill_r_reg[39]_bret_bret__12
+		i_0/refill_r_reg[39]_bret_bret__13
+		i_0/refill_r_reg[39]_bret_bret__14
+		i_0/refill_r_reg[39]_bret_bret__15
+		i_0/refill_r_reg[39]_bret_bret__16
+		i_0/refill_r_reg[39]_bret_bret__17
+		i_0/refill_r_reg[39]_bret_bret__3
+		i_0/refill_r_reg[39]_bret_bret__4
+		i_0/refill_r_reg[39]_bret_bret__5
+		i_0/refill_r_reg[39]_bret_bret__6
+		i_0/refill_r_reg[39]_bret_bret__7
+		i_0/refill_r_reg[39]_bret_bret__8
+		i_0/refill_r_reg[39]_bret_bret__9
+		i_0/refill_r_reg[3]_bret
+		i_0/refill_r_reg[3]_bret_bret
+		i_0/refill_r_reg[3]_bret_bret__0
+		i_0/refill_r_reg[3]_bret_bret__1
+		i_0/refill_r_reg[3]_bret_bret__10
+		i_0/refill_r_reg[3]_bret_bret__11
+		i_0/refill_r_reg[3]_bret_bret__12
+		i_0/refill_r_reg[3]_bret_bret__13
+		i_0/refill_r_reg[3]_bret_bret__14
+		i_0/refill_r_reg[3]_bret_bret__15
+		i_0/refill_r_reg[3]_bret_bret__16
+		i_0/refill_r_reg[3]_bret_bret__17
+		i_0/refill_r_reg[3]_bret_bret__3
+		i_0/refill_r_reg[3]_bret_bret__4
+		i_0/refill_r_reg[3]_bret_bret__5
+		i_0/refill_r_reg[3]_bret_bret__6
+		i_0/refill_r_reg[3]_bret_bret__7
+		i_0/refill_r_reg[3]_bret_bret__8
+		i_0/refill_r_reg[3]_bret_bret__9
+		i_0/refill_r_reg[40]_bret__0
+		i_0/refill_r_reg[40]_bret_bret
+		i_0/refill_r_reg[40]_bret_bret__0
+		i_0/refill_r_reg[40]_bret_bret__1
+		i_0/refill_r_reg[40]_bret_bret__10
+		i_0/refill_r_reg[40]_bret_bret__2
+		i_0/refill_r_reg[40]_bret_bret__4
+		i_0/refill_r_reg[40]_bret_bret__5
+		i_0/refill_r_reg[40]_bret_bret__6
+		i_0/refill_r_reg[40]_bret_bret__7
+		i_0/refill_r_reg[40]_bret_bret__8
+		i_0/refill_r_reg[40]_bret_bret__9
+		i_0/refill_r_reg[41]_bret
+		i_0/refill_r_reg[41]_bret_bret
+		i_0/refill_r_reg[41]_bret_bret__0
+		i_0/refill_r_reg[41]_bret_bret__1
+		i_0/refill_r_reg[41]_bret_bret__10
+		i_0/refill_r_reg[41]_bret_bret__11
+		i_0/refill_r_reg[41]_bret_bret__12
+		i_0/refill_r_reg[41]_bret_bret__13
+		i_0/refill_r_reg[41]_bret_bret__14
+		i_0/refill_r_reg[41]_bret_bret__15
+		i_0/refill_r_reg[41]_bret_bret__16
+		i_0/refill_r_reg[41]_bret_bret__17
+		i_0/refill_r_reg[41]_bret_bret__3
+		i_0/refill_r_reg[41]_bret_bret__4
+		i_0/refill_r_reg[41]_bret_bret__5
+		i_0/refill_r_reg[41]_bret_bret__6
+		i_0/refill_r_reg[41]_bret_bret__7
+		i_0/refill_r_reg[41]_bret_bret__8
+		i_0/refill_r_reg[41]_bret_bret__9
+		i_0/refill_r_reg[42]_bret__0
+		i_0/refill_r_reg[42]_bret_bret
+		i_0/refill_r_reg[42]_bret_bret__0
+		i_0/refill_r_reg[42]_bret_bret__1
+		i_0/refill_r_reg[42]_bret_bret__10
+		i_0/refill_r_reg[42]_bret_bret__11
+		i_0/refill_r_reg[42]_bret_bret__12
+		i_0/refill_r_reg[42]_bret_bret__13
+		i_0/refill_r_reg[42]_bret_bret__14
+		i_0/refill_r_reg[42]_bret_bret__15
+		i_0/refill_r_reg[42]_bret_bret__16
+		i_0/refill_r_reg[42]_bret_bret__17
+		i_0/refill_r_reg[42]_bret_bret__3
+		i_0/refill_r_reg[42]_bret_bret__4
+		i_0/refill_r_reg[42]_bret_bret__5
+		i_0/refill_r_reg[42]_bret_bret__6
+		i_0/refill_r_reg[42]_bret_bret__7
+		i_0/refill_r_reg[42]_bret_bret__8
+		i_0/refill_r_reg[42]_bret_bret__9
+		i_0/refill_r_reg[43]_bret
+		i_0/refill_r_reg[43]_bret_bret
+		i_0/refill_r_reg[43]_bret_bret__0
+		i_0/refill_r_reg[43]_bret_bret__1
+		i_0/refill_r_reg[43]_bret_bret__10
+		i_0/refill_r_reg[43]_bret_bret__11
+		i_0/refill_r_reg[43]_bret_bret__12
+		i_0/refill_r_reg[43]_bret_bret__13
+		i_0/refill_r_reg[43]_bret_bret__14
+		i_0/refill_r_reg[43]_bret_bret__15
+		i_0/refill_r_reg[43]_bret_bret__16
+		i_0/refill_r_reg[43]_bret_bret__17
+		i_0/refill_r_reg[43]_bret_bret__3
+		i_0/refill_r_reg[43]_bret_bret__4
+		i_0/refill_r_reg[43]_bret_bret__5
+		i_0/refill_r_reg[43]_bret_bret__6
+		i_0/refill_r_reg[43]_bret_bret__7
+		i_0/refill_r_reg[43]_bret_bret__8
+		i_0/refill_r_reg[43]_bret_bret__9
+		i_0/refill_r_reg[44]_bret__0
+		i_0/refill_r_reg[44]_bret_bret
+		i_0/refill_r_reg[44]_bret_bret__0
+		i_0/refill_r_reg[44]_bret_bret__1
+		i_0/refill_r_reg[44]_bret_bret__10
+		i_0/refill_r_reg[44]_bret_bret__11
+		i_0/refill_r_reg[44]_bret_bret__12
+		i_0/refill_r_reg[44]_bret_bret__13
+		i_0/refill_r_reg[44]_bret_bret__14
+		i_0/refill_r_reg[44]_bret_bret__15
+		i_0/refill_r_reg[44]_bret_bret__16
+		i_0/refill_r_reg[44]_bret_bret__17
+		i_0/refill_r_reg[44]_bret_bret__3
+		i_0/refill_r_reg[44]_bret_bret__4
+		i_0/refill_r_reg[44]_bret_bret__5
+		i_0/refill_r_reg[44]_bret_bret__6
+		i_0/refill_r_reg[44]_bret_bret__7
+		i_0/refill_r_reg[44]_bret_bret__8
+		i_0/refill_r_reg[44]_bret_bret__9
+		i_0/refill_r_reg[45]_bret
+		i_0/refill_r_reg[45]_bret_bret
+		i_0/refill_r_reg[45]_bret_bret__0
+		i_0/refill_r_reg[45]_bret_bret__1
+		i_0/refill_r_reg[45]_bret_bret__10
+		i_0/refill_r_reg[45]_bret_bret__11
+		i_0/refill_r_reg[45]_bret_bret__12
+		i_0/refill_r_reg[45]_bret_bret__13
+		i_0/refill_r_reg[45]_bret_bret__14
+		i_0/refill_r_reg[45]_bret_bret__15
+		i_0/refill_r_reg[45]_bret_bret__16
+		i_0/refill_r_reg[45]_bret_bret__17
+		i_0/refill_r_reg[45]_bret_bret__3
+		i_0/refill_r_reg[45]_bret_bret__4
+		i_0/refill_r_reg[45]_bret_bret__5
+		i_0/refill_r_reg[45]_bret_bret__6
+		i_0/refill_r_reg[45]_bret_bret__7
+		i_0/refill_r_reg[45]_bret_bret__8
+		i_0/refill_r_reg[45]_bret_bret__9
+		i_0/refill_r_reg[46]_bret
+		i_0/refill_r_reg[46]_bret_bret
+		i_0/refill_r_reg[46]_bret_bret__0
+		i_0/refill_r_reg[46]_bret_bret__1
+		i_0/refill_r_reg[46]_bret_bret__10
+		i_0/refill_r_reg[46]_bret_bret__11
+		i_0/refill_r_reg[46]_bret_bret__12
+		i_0/refill_r_reg[46]_bret_bret__13
+		i_0/refill_r_reg[46]_bret_bret__14
+		i_0/refill_r_reg[46]_bret_bret__15
+		i_0/refill_r_reg[46]_bret_bret__16
+		i_0/refill_r_reg[46]_bret_bret__17
+		i_0/refill_r_reg[46]_bret_bret__3
+		i_0/refill_r_reg[46]_bret_bret__4
+		i_0/refill_r_reg[46]_bret_bret__5
+		i_0/refill_r_reg[46]_bret_bret__6
+		i_0/refill_r_reg[46]_bret_bret__7
+		i_0/refill_r_reg[46]_bret_bret__8
+		i_0/refill_r_reg[46]_bret_bret__9
+		i_0/refill_r_reg[47]_bret
+		i_0/refill_r_reg[47]_bret_bret
+		i_0/refill_r_reg[47]_bret_bret__0
+		i_0/refill_r_reg[47]_bret_bret__1
+		i_0/refill_r_reg[47]_bret_bret__10
+		i_0/refill_r_reg[47]_bret_bret__11
+		i_0/refill_r_reg[47]_bret_bret__12
+		i_0/refill_r_reg[47]_bret_bret__13
+		i_0/refill_r_reg[47]_bret_bret__14
+		i_0/refill_r_reg[47]_bret_bret__15
+		i_0/refill_r_reg[47]_bret_bret__16
+		i_0/refill_r_reg[47]_bret_bret__17
+		i_0/refill_r_reg[47]_bret_bret__3
+		i_0/refill_r_reg[47]_bret_bret__4
+		i_0/refill_r_reg[47]_bret_bret__5
+		i_0/refill_r_reg[47]_bret_bret__6
+		i_0/refill_r_reg[47]_bret_bret__7
+		i_0/refill_r_reg[47]_bret_bret__8
+		i_0/refill_r_reg[47]_bret_bret__9
+		i_0/refill_r_reg[4]_bret
+		i_0/refill_r_reg[4]_bret_bret
+		i_0/refill_r_reg[4]_bret_bret__0
+		i_0/refill_r_reg[4]_bret_bret__1
+		i_0/refill_r_reg[4]_bret_bret__10
+		i_0/refill_r_reg[4]_bret_bret__11
+		i_0/refill_r_reg[4]_bret_bret__12
+		i_0/refill_r_reg[4]_bret_bret__13
+		i_0/refill_r_reg[4]_bret_bret__14
+		i_0/refill_r_reg[4]_bret_bret__15
+		i_0/refill_r_reg[4]_bret_bret__16
+		i_0/refill_r_reg[4]_bret_bret__17
+		i_0/refill_r_reg[4]_bret_bret__3
+		i_0/refill_r_reg[4]_bret_bret__4
+		i_0/refill_r_reg[4]_bret_bret__5
+		i_0/refill_r_reg[4]_bret_bret__6
+		i_0/refill_r_reg[4]_bret_bret__7
+		i_0/refill_r_reg[4]_bret_bret__8
+		i_0/refill_r_reg[4]_bret_bret__9
+		i_0/refill_r_reg[5]_bret__0
+		i_0/refill_r_reg[5]_bret_bret
+		i_0/refill_r_reg[5]_bret_bret__0
+		i_0/refill_r_reg[5]_bret_bret__1
+		i_0/refill_r_reg[5]_bret_bret__10
+		i_0/refill_r_reg[5]_bret_bret__11
+		i_0/refill_r_reg[5]_bret_bret__12
+		i_0/refill_r_reg[5]_bret_bret__13
+		i_0/refill_r_reg[5]_bret_bret__14
+		i_0/refill_r_reg[5]_bret_bret__15
+		i_0/refill_r_reg[5]_bret_bret__16
+		i_0/refill_r_reg[5]_bret_bret__17
+		i_0/refill_r_reg[5]_bret_bret__3
+		i_0/refill_r_reg[5]_bret_bret__4
+		i_0/refill_r_reg[5]_bret_bret__5
+		i_0/refill_r_reg[5]_bret_bret__6
+		i_0/refill_r_reg[5]_bret_bret__7
+		i_0/refill_r_reg[5]_bret_bret__8
+		i_0/refill_r_reg[5]_bret_bret__9
+		i_0/refill_r_reg[6]_bret
+		i_0/refill_r_reg[6]_bret_bret
+		i_0/refill_r_reg[6]_bret_bret__0
+		i_0/refill_r_reg[6]_bret_bret__1
+		i_0/refill_r_reg[6]_bret_bret__10
+		i_0/refill_r_reg[6]_bret_bret__11
+		i_0/refill_r_reg[6]_bret_bret__12
+		i_0/refill_r_reg[6]_bret_bret__13
+		i_0/refill_r_reg[6]_bret_bret__14
+		i_0/refill_r_reg[6]_bret_bret__15
+		i_0/refill_r_reg[6]_bret_bret__16
+		i_0/refill_r_reg[6]_bret_bret__17
+		i_0/refill_r_reg[6]_bret_bret__3
+		i_0/refill_r_reg[6]_bret_bret__4
+		i_0/refill_r_reg[6]_bret_bret__5
+		i_0/refill_r_reg[6]_bret_bret__6
+		i_0/refill_r_reg[6]_bret_bret__7
+		i_0/refill_r_reg[6]_bret_bret__8
+		i_0/refill_r_reg[6]_bret_bret__9
+		i_0/refill_r_reg[7]_bret
+		i_0/refill_r_reg[7]_bret_bret
+		i_0/refill_r_reg[7]_bret_bret__0
+		i_0/refill_r_reg[7]_bret_bret__1
+		i_0/refill_r_reg[7]_bret_bret__10
+		i_0/refill_r_reg[7]_bret_bret__11
+		i_0/refill_r_reg[7]_bret_bret__12
+		i_0/refill_r_reg[7]_bret_bret__13
+		i_0/refill_r_reg[7]_bret_bret__14
+		i_0/refill_r_reg[7]_bret_bret__15
+		i_0/refill_r_reg[7]_bret_bret__16
+		i_0/refill_r_reg[7]_bret_bret__17
+		i_0/refill_r_reg[7]_bret_bret__3
+		i_0/refill_r_reg[7]_bret_bret__4
+		i_0/refill_r_reg[7]_bret_bret__5
+		i_0/refill_r_reg[7]_bret_bret__6
+		i_0/refill_r_reg[7]_bret_bret__7
+		i_0/refill_r_reg[7]_bret_bret__8
+		i_0/refill_r_reg[7]_bret_bret__9
+		i_0/refill_r_reg[8]_bret
+		i_0/refill_r_reg[8]_bret_bret
+		i_0/refill_r_reg[8]_bret_bret__0
+		i_0/refill_r_reg[8]_bret_bret__1
+		i_0/refill_r_reg[8]_bret_bret__10
+		i_0/refill_r_reg[8]_bret_bret__11
+		i_0/refill_r_reg[8]_bret_bret__12
+		i_0/refill_r_reg[8]_bret_bret__13
+		i_0/refill_r_reg[8]_bret_bret__14
+		i_0/refill_r_reg[8]_bret_bret__15
+		i_0/refill_r_reg[8]_bret_bret__16
+		i_0/refill_r_reg[8]_bret_bret__17
+		i_0/refill_r_reg[8]_bret_bret__3
+		i_0/refill_r_reg[8]_bret_bret__4
+		i_0/refill_r_reg[8]_bret_bret__5
+		i_0/refill_r_reg[8]_bret_bret__6
+		i_0/refill_r_reg[8]_bret_bret__7
+		i_0/refill_r_reg[8]_bret_bret__8
+		i_0/refill_r_reg[8]_bret_bret__9
+		i_0/refill_r_reg[9]_bret
+		i_0/refill_r_reg[9]_bret_bret
+		i_0/refill_r_reg[9]_bret_bret__0
+		i_0/refill_r_reg[9]_bret_bret__1
+		i_0/refill_r_reg[9]_bret_bret__10
+		i_0/refill_r_reg[9]_bret_bret__11
+		i_0/refill_r_reg[9]_bret_bret__12
+		i_0/refill_r_reg[9]_bret_bret__13
+		i_0/refill_r_reg[9]_bret_bret__14
+		i_0/refill_r_reg[9]_bret_bret__15
+		i_0/refill_r_reg[9]_bret_bret__16
+		i_0/refill_r_reg[9]_bret_bret__17
+		i_0/refill_r_reg[9]_bret_bret__3
+		i_0/refill_r_reg[9]_bret_bret__4
+		i_0/refill_r_reg[9]_bret_bret__5
+		i_0/refill_r_reg[9]_bret_bret__6
+		i_0/refill_r_reg[9]_bret_bret__7
+		i_0/refill_r_reg[9]_bret_bret__8
+		i_0/refill_r_reg[9]_bret_bret__9
+		i_0/refill_vld_r_reg_bret
+		i_0/refill_vld_r_reg_bret__1
+		i_0/refill_vld_r_reg_bret__2
+		i_0/refill_vld_r_reg_bret__3
+		i_0/refill_vld_r_reg_bret__4
+		i_0/refill_vld_r_reg_bret_bret
+		i_0/refill_vld_r_reg_bret_bret__0
+		i_0/refill_vld_r_reg_bret_bret__1
+		i_0/refill_vld_r_reg_bret_bret__2
+		i_0/refill_vld_r_reg_bret_bret__3_bret
+		i_0/refill_vld_r_reg_bret_bret__3_bret__0
+		i_0/refill_vld_r_reg_bret_bret__3_bret__1
+		i_0/refill_vld_r_reg_bret_bret__3_bret__2
+		i_0/refill_vld_r_reg_bret_bret__4_bret
+		i_0/refill_vld_r_reg_bret_bret__4_bret__0
+		i_0/refill_vld_r_reg_bret_bret__4_bret__1
+		i_0/refill_vld_r_reg_bret_bret__4_bret__2
+ 
+
+INFO: [Synth 8-5816] Retiming module `pheap_GT0' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `pheap' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap_GT1_tempName`
+	Numbers of forward move = 13, and backward move = 0
+
+	Retimed registers names:
+		i_1/g_st[10].ins_k_r_reg[41]_fret
+		i_1/g_st[10].ins_k_r_reg[41]_fret__0
+		i_1/g_st[10].ins_k_r_reg[41]_fret__1
+		i_1/g_st[10].ins_k_r_reg[43]_fret__0
+		i_1/g_st[10].ins_k_r_reg[43]_fret__1
+		i_1/g_st[10].ins_k_r_reg[43]_fret__2
+		i_1/g_st[10].ins_t_r_reg[162]_fret
+		i_1/g_st[10].ins_t_r_reg[162]_fret__0
+		i_1/g_st[10].ins_t_r_reg[162]_fret__1
+		i_1/g_st[11].ins_k_r_reg[46]_fret
+		i_1/g_st[11].ins_k_r_reg[47]_fret
+		i_1/g_st[14].ins_k_r_reg[58]_fret
+		i_1/g_st[14].ins_k_r_reg[59]_fret
+		i_1/g_st[14].ins_k_r_reg[59]_fret__0
+ 
+
+INFO: [Synth 8-5816] Retiming module `pheap_GT1_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `pheap`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `pheap' done
+
+
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:14 ; elapsed = 00:04:21 . Memory (MB): peak = 2025.277 ; gain = 1323.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:21 ; elapsed = 00:04:28 . Memory (MB): peak = 2129.582 ; gain = 1427.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:21 ; elapsed = 00:04:28 . Memory (MB): peak = 2129.582 ; gain = 1427.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:24 ; elapsed = 00:04:31 . Memory (MB): peak = 2132.211 ; gain = 1430.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:24 ; elapsed = 00:04:31 . Memory (MB): peak = 2132.211 ; gain = 1430.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:24 ; elapsed = 00:04:32 . Memory (MB): peak = 2157.102 ; gain = 1455.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:24 ; elapsed = 00:04:32 . Memory (MB): peak = 2157.102 ; gain = 1455.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Retiming Report:
++--------------------+-----+
+|Retiming summary:   |     | 
++--------------------+-----+
+|Forward Retiming    | 16  | 
+|Backward Retiming   | 242 | 
+|New registers added | 939 | 
+|Registers deleted   | 49  | 
++--------------------+-----+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   631|
+|2     |LUT1     |   132|
+|3     |LUT2     |   547|
+|4     |LUT3     |  1937|
+|5     |LUT4     |  3240|
+|6     |LUT5     |  1421|
+|7     |LUT6     |  7269|
+|8     |MUXF7    |   111|
+|9     |MUXF8    |     7|
+|10    |RAM32M   |    96|
+|11    |RAMB18E1 |     4|
+|12    |RAMB36E1 |    36|
+|15    |FDRE     |  6104|
+|16    |FDSE     |    42|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:25 ; elapsed = 00:04:32 . Memory (MB): peak = 2157.102 ; gain = 1455.320
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:11 ; elapsed = 00:04:28 . Memory (MB): peak = 2157.102 ; gain = 1367.207
+Synthesis Optimization Complete : Time (s): cpu = 00:03:25 ; elapsed = 00:04:33 . Memory (MB): peak = 2157.102 ; gain = 1455.320
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.242 . Memory (MB): peak = 2166.211 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 885 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc:2]
+Finished Parsing XDC File [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2173.070 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 96 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 96 instances
+
+Synth Design complete | Checksum: 265e262
+INFO: [Common 17-83] Releasing license: Synthesis
+198 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:32 ; elapsed = 00:04:44 . Memory (MB): peak = 2173.070 ; gain = 1681.535
+# report_timing_summary -file $outdir/post_synth_timing.rpt
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc:2]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2355.359 ; gain = 182.289
+# opt_design -retarget -propconst -sweep -remap
+Command: opt_design -retarget -propconst -sweep -remap
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.986 . Memory (MB): peak = 2410.816 ; gain = 55.457
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 16157e9da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 16157e9da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 1 Initialization | Checksum: 16157e9da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 16157e9da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.438 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 16157e9da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.479 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 16157e9da
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.481 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 17e617056
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.727 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Retarget | Checksum: 17e617056
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1b9ed9cdd
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.868 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Constant propagation | Checksum: 1b9ed9cdd
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 5 Sweep | Checksum: 170514aac
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Sweep | Checksum: 170514aac
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 Remap
+Phase 6 Remap | Checksum: 170514aac
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Remap | Checksum: 170514aac
+INFO: [Opt 31-389] Phase Remap created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 170514aac
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Post Processing Netlist | Checksum: 170514aac
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 8 Finalization
+
+Phase 8.1 Finalizing Design Cores and Updating Shapes
+Phase 8.1 Finalizing Design Cores and Updating Shapes | Checksum: 2231dfdc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 8.2 Verifying Netlist Connectivity
+Phase 8.2 Verifying Netlist Connectivity | Checksum: 2231dfdc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 8 Finalization | Checksum: 2231dfdc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  Constant propagation     |               0  |               0  |                                              0  |
+|  Sweep                    |               0  |               0  |                                              0  |
+|  Remap                    |               0  |               0  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 2231dfdc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 2231dfdc9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2783.734 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2783.734 ; gain = 428.375
+# place_design -directive ExtraTimingOpt
+Command: place_design -directive ExtraTimingOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Vivado_Tcl 4-2302] The placer was invoked with the 'ExtraTimingOpt' directive.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1963f9172
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2783.734 ; gain = 0.000
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc:2]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc:2]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b2ca8d2c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1a29e0c03
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1a29e0c03
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1a29e0c03
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1341dbda2
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 167778166
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 167778166
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: dc2fb4bc
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:22 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 1a4cfb5db
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:23 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 245 LUTNM shape to break, 168 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 47, two critical 198, total 245, new lutff created 49
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 309 nets or LUTs. Breaked 245 LUTs, combined 64 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-527] Pass 1: Identified 40 candidate cells for BRAM register optimization
+INFO: [Physopt 32-665] Processed cell g_ram[12].g_bank[3].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[10].g_bank[3].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[8].g_bank[0].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[12].g_bank[2].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[12].g_bank[1].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[1].u_bank/mem_reg_2. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[3].u_bank/mem_reg_0. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[8].g_bank[2].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[2].u_bank/mem_reg_1. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[0].u_bank/mem_reg_1. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[12].g_bank[0].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[1].u_bank/mem_reg_1. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[0].u_bank/mem_reg_0. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[2].u_bank/mem_reg_1. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[3].u_bank/mem_reg_1. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[1].u_bank/mem_reg_1. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[2].u_bank/mem_reg_2. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[0].u_bank/mem_reg_1. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[8].g_bank[3].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[9].g_bank[1].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[9].g_bank[0].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[0].u_bank/mem_reg_2. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[9].g_bank[3].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[11].g_bank[2].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[0].u_bank/mem_reg_0. 36 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[3].u_bank/mem_reg_1. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[8].g_bank[1].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[2].u_bank/mem_reg_0. 36 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[10].g_bank[2].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[10].g_bank[1].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[9].g_bank[2].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[1].u_bank/mem_reg_0. 36 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[13].g_bank[3].u_bank/mem_reg_0. 36 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[2].u_bank/mem_reg_0. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[10].g_bank[0].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[11].g_bank[0].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[1].u_bank/mem_reg_0. 18 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[11].g_bank[3].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[14].g_bank[3].u_bank/mem_reg_2. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell g_ram[11].g_bank[1].u_bank/mem_reg. 48 registers were pushed out.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 40 nets or cells. Created 1344 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 2783.734 ; gain = 0.000
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          245  |             64  |                   309  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |         1344  |              0  |                    40  |           0  |           1  |  00:00:03  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |         1589  |             64  |                   349  |           0  |           9  |  00:00:04  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2579e64d7
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:28 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 214488f54
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 214488f54
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 20897d5c9
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:31 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 3134c356b
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:33 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 32583c889
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:34 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2818071c5
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:34 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 258ce4bc4
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:40 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1ef14a805
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:46 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1d2618dca
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:47 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 20cb68137
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:47 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 261229585
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:58 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 261229585
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:58 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [C:/Claude/Code/PQ/syn/out_aggr_xc7k160tfbg484-3_p5_400/clk.xdc:2]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 253526de3
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.528 | TNS=-103.762 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1e628eca9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.295 . Memory (MB): peak = 2783.734 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 2b117bc76
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.424 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 253526de3
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:02 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.051. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 308c3e92a
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:03:18 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:03:18 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 308c3e92a
+
+Time (s): cpu = 00:03:40 ; elapsed = 00:03:18 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Post Placement Optimization Initialization | Checksum: 2b5ab5e3c
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.402 | TNS=-52.448 |
+Phase 1 Physical Synthesis Initialization | Checksum: 276d63c6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.269 . Memory (MB): peak = 2783.734 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 282c35d0c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.398 . Memory (MB): peak = 2783.734 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.043. For the most accurate timing information please run report_timing.
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2683c02ca
+
+Time (s): cpu = 00:06:00 ; elapsed = 00:05:36 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                4x4|
+|___________|___________________|___________________|
+|       East|                4x4|                8x8|
+|___________|___________________|___________________|
+|       West|                4x4|                8x8|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 2683c02ca
+
+Time (s): cpu = 00:06:00 ; elapsed = 00:05:36 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 2683c02ca
+
+Time (s): cpu = 00:06:00 ; elapsed = 00:05:36 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2783.734 ; gain = 0.000
+
+Time (s): cpu = 00:06:00 ; elapsed = 00:05:36 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 283b16f2f
+
+Time (s): cpu = 00:06:00 ; elapsed = 00:05:36 . Memory (MB): peak = 2783.734 ; gain = 0.000
+Ending Placer Task | Checksum: 20b84fa46
+
+Time (s): cpu = 00:06:01 ; elapsed = 00:05:37 . Memory (MB): peak = 2783.734 ; gain = 0.000
+84 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:06:04 ; elapsed = 00:05:39 . Memory (MB): peak = 2783.734 ; gain = 0.000
+# phys_opt_design -directive AggressiveExplore
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2783.734 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2280] Estimated Timing Summary | WNS= 0.014 | TNS= 0.000 | WHS= -0.008 |
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-2291] Design worst hold slack (WHS) is greater than or equal to -0.250 ns. Hold fix optimization will be skipped.
+ 
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+7 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# route_design -directive AggressiveExplore
+Command: route_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'AggressiveExplore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 9a180922 ConstDB: 0 ShapeSum: d0689ce7 RouteDB: a104543d
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "op[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "op[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "op[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "op[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Constraints 18-8777] Unable to split tiles. All required files are not available.
+Post Restoration Checksum: NetGraph: 2ef75bf9 | NumContArr: a9926634 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 25ddbb767
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:22 . Memory (MB): peak = 2873.184 ; gain = 89.449
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 25ddbb767
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2873.184 ; gain = 89.449
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 25ddbb767
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2873.184 ; gain = 89.449
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 2680a7125
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 2880.965 ; gain = 97.230
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.194  | TNS=0.000  | WHS=0.073  | THS=0.000  |
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 28a3aa789
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:27 . Memory (MB): peak = 2929.117 ; gain = 145.383
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 19443
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 19443
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 28a3aa789
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:28 . Memory (MB): peak = 2929.117 ; gain = 145.383
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 28a3aa789
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:28 . Memory (MB): peak = 2929.117 ; gain = 145.383
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 26bed795e
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:37 . Memory (MB): peak = 2929.117 ; gain = 145.383
+Phase 4 Initial Routing | Checksum: 26bed795e
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:37 . Memory (MB): peak = 2929.117 ; gain = 145.383
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 11807
+ Number of Nodes with overlaps = 4090
+ Number of Nodes with overlaps = 1616
+ Number of Nodes with overlaps = 628
+ Number of Nodes with overlaps = 208
+ Number of Nodes with overlaps = 57
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.354 | TNS=-45.985| WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 248c638bd
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:14 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 682
+ Number of Nodes with overlaps = 221
+ Number of Nodes with overlaps = 119
+ Number of Nodes with overlaps = 54
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.298 | TNS=-26.407| WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 13b1ca1d6
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:02:31 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 5.3 Global Iteration 2
+ Number of Nodes with overlaps = 1245
+ Number of Nodes with overlaps = 583
+ Number of Nodes with overlaps = 303
+ Number of Nodes with overlaps = 142
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.211 | TNS=-11.396| WHS=N/A    | THS=N/A    |
+
+Phase 5.3 Global Iteration 2 | Checksum: 2c61cb96f
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:02:57 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 5.4 Global Iteration 3
+ Number of Nodes with overlaps = 815
+ Number of Nodes with overlaps = 233
+ Number of Nodes with overlaps = 82
+ Number of Nodes with overlaps = 53
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.178 | TNS=-6.612 | WHS=N/A    | THS=N/A    |
+
+Phase 5.4 Global Iteration 3 | Checksum: 263fa815f
+
+Time (s): cpu = 00:05:08 ; elapsed = 00:03:14 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 5.5 Global Iteration 4
+ Number of Nodes with overlaps = 1150
+ Number of Nodes with overlaps = 208
+ Number of Nodes with overlaps = 89
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.204 | TNS=-8.462 | WHS=N/A    | THS=N/A    |
+
+Phase 5.5 Global Iteration 4 | Checksum: 23d853978
+
+Time (s): cpu = 00:05:28 ; elapsed = 00:03:28 . Memory (MB): peak = 2937.480 ; gain = 153.746
+Phase 5 Rip-up And Reroute | Checksum: 23d853978
+
+Time (s): cpu = 00:05:28 ; elapsed = 00:03:28 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 27e4012f9
+
+Time (s): cpu = 00:05:30 ; elapsed = 00:03:29 . Memory (MB): peak = 2937.480 ; gain = 153.746
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.178 | TNS=-6.610 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 6.1 Delay CleanUp | Checksum: 1e601de87
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:30 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 1e601de87
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:30 . Memory (MB): peak = 2937.480 ; gain = 153.746
+Phase 6 Delay and Skew Optimization | Checksum: 1e601de87
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:30 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.166 | TNS=-6.026 | WHS=-0.008 | THS=-0.155 |
+
+Phase 7.1 Hold Fix Iter | Checksum: 1ab18572b
+
+Time (s): cpu = 00:05:33 ; elapsed = 00:03:31 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 7.2 Non Free Resource Hold Fix Iter
+Phase 7.2 Non Free Resource Hold Fix Iter | Checksum: 26a7fada9
+
+Time (s): cpu = 00:05:33 ; elapsed = 00:03:31 . Memory (MB): peak = 2937.480 ; gain = 153.746
+Phase 7 Post Hold Fix | Checksum: 26a7fada9
+
+Time (s): cpu = 00:05:33 ; elapsed = 00:03:31 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 8 Timing Verification
+
+Phase 8.1 Update Timing
+Phase 8.1 Update Timing | Checksum: 208caf9aa
+
+Time (s): cpu = 00:05:36 ; elapsed = 00:03:33 . Memory (MB): peak = 2937.480 ; gain = 153.746
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.166 | TNS=-6.026 | WHS=0.080  | THS=0.000  |
+
+Phase 8 Timing Verification | Checksum: 208caf9aa
+
+Time (s): cpu = 00:05:36 ; elapsed = 00:03:33 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 9 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 6.50364 %
+  Global Horizontal Routing Utilization  = 9.42975 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 74.7748%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 90.991%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X12Y47 -> INT_L_X12Y47
+   INT_L_X32Y17 -> INT_L_X32Y17
+East Dir 1x1 Area, Max Cong = 91.1765%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X20Y29 -> INT_L_X20Y29
+   INT_R_X23Y28 -> INT_R_X23Y28
+   INT_L_X24Y24 -> INT_L_X24Y24
+   INT_L_X26Y24 -> INT_L_X26Y24
+   INT_R_X21Y23 -> INT_R_X21Y23
+West Dir 2x2 Area, Max Cong = 89.7059%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X46Y72 -> INT_R_X47Y73
+   INT_L_X22Y52 -> INT_R_X23Y53
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: West
+----------------
+Congested clusters found at Level 1
+Effective congestion level: 2 Aspect Ratio: 0.666667 Sparse Ratio: 1
+
+Phase 9 Route finalize | Checksum: 208caf9aa
+
+Time (s): cpu = 00:05:37 ; elapsed = 00:03:33 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 10 Verifying routed nets
+
+ Verification completed successfully
+Phase 10 Verifying routed nets | Checksum: 208caf9aa
+
+Time (s): cpu = 00:05:37 ; elapsed = 00:03:33 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 11 Depositing Routes
+Phase 11 Depositing Routes | Checksum: 1911f3e91
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:03:35 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 12 Incr Placement Change
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2937.480 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.034. For the most accurate timing information please run report_timing.
+Ending IncrPlace Task | Checksum: d839ddc9
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2937.480 ; gain = 0.000
+Phase 12 Incr Placement Change | Checksum: d839ddc9
+
+Time (s): cpu = 00:06:09 ; elapsed = 00:03:59 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 13 Build RT Design
+Checksum: PlaceDB: 3782e423 ConstDB: 0 ShapeSum: 54f57d7a RouteDB: 4bc17c2c
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_key[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_key[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ins_id[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ins_id[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Post Restoration Checksum: NetGraph: 361872f7 | NumContArr: b7ec82bc | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 13 Build RT Design | Checksum: 27356eaed
+
+Time (s): cpu = 00:06:16 ; elapsed = 00:04:03 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 14 Router Initialization
+
+Phase 14.1 Fix Topology Constraints
+Phase 14.1 Fix Topology Constraints | Checksum: 27356eaed
+
+Time (s): cpu = 00:06:16 ; elapsed = 00:04:03 . Memory (MB): peak = 2937.480 ; gain = 153.746
+
+Phase 14.2 Pre Route Cleanup
+Phase 14.2 Pre Route Cleanup | Checksum: 2cae23280
+
+Time (s): cpu = 00:06:16 ; elapsed = 00:04:08 . Memory (MB): peak = 2937.480 ; gain = 153.746
+ Number of Nodes with overlaps = 0
+
+Phase 14.3 Update Timing
+Phase 14.3 Update Timing | Checksum: 344a6acd1
+
+Time (s): cpu = 00:06:25 ; elapsed = 00:04:14 . Memory (MB): peak = 2937.480 ; gain = 153.746
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.018  | TNS=0.000  | WHS=0.073  | THS=0.000  |
+
+
+Phase 14.4 Soft Constraint Pins - Fast Budgeting
+Phase 14.4 Soft Constraint Pins - Fast Budgeting | Checksum: 27bb7f469
+
+Time (s): cpu = 00:06:31 ; elapsed = 00:04:18 . Memory (MB): peak = 2970.797 ; gain = 187.062
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 6.46426 %
+  Global Horizontal Routing Utilization  = 9.3532 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 606
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 167
+  Number of Partially Routed Nets     = 439
+  Number of Node Overlaps             = 0
+
+Phase 14 Router Initialization | Checksum: 27bb7f469
+
+Time (s): cpu = 00:06:32 ; elapsed = 00:04:19 . Memory (MB): peak = 2970.797 ; gain = 187.062
+
+Phase 15 Global Routing
+Phase 15 Global Routing | Checksum: 27bb7f469
+
+Time (s): cpu = 00:06:32 ; elapsed = 00:04:19 . Memory (MB): peak = 2970.797 ; gain = 187.062
+
+Phase 16 Initial Routing
+
+Phase 16.1 Initial Net Routing Pass
+Phase 16.1 Initial Net Routing Pass | Checksum: 14aba6c2a
+
+Time (s): cpu = 00:06:34 ; elapsed = 00:04:20 . Memory (MB): peak = 2970.797 ; gain = 187.062
+Phase 16 Initial Routing | Checksum: 14aba6c2a
+
+Time (s): cpu = 00:06:34 ; elapsed = 00:04:20 . Memory (MB): peak = 2970.797 ; gain = 187.062
+
+Phase 17 Rip-up And Reroute
+
+Phase 17.1 Global Iteration 0
+ Number of Nodes with overlaps = 650
+ Number of Nodes with overlaps = 372
+ Number of Nodes with overlaps = 233
+ Number of Nodes with overlaps = 128
+ Number of Nodes with overlaps = 107
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.123 | TNS=-4.507 | WHS=N/A    | THS=N/A    |
+
+Phase 17.1 Global Iteration 0 | Checksum: 2f9ba44b8
+
+Time (s): cpu = 00:07:11 ; elapsed = 00:04:46 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 17.2 Global Iteration 1
+ Number of Nodes with overlaps = 3101
+ Number of Nodes with overlaps = 1274
+ Number of Nodes with overlaps = 611
+ Number of Nodes with overlaps = 295
+ Number of Nodes with overlaps = 148
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.136 | TNS=-3.308 | WHS=N/A    | THS=N/A    |
+
+Phase 17.2 Global Iteration 1 | Checksum: 15edd6b03
+
+Time (s): cpu = 00:07:55 ; elapsed = 00:05:14 . Memory (MB): peak = 2974.430 ; gain = 190.695
+Phase 17 Rip-up And Reroute | Checksum: 15edd6b03
+
+Time (s): cpu = 00:07:55 ; elapsed = 00:05:14 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 18 Delay and Skew Optimization
+
+Phase 18.1 Delay CleanUp
+
+Phase 18.1.1 Update Timing
+Phase 18.1.1 Update Timing | Checksum: 146129de9
+
+Time (s): cpu = 00:07:57 ; elapsed = 00:05:15 . Memory (MB): peak = 2974.430 ; gain = 190.695
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.123 | TNS=-4.505 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 18.1 Delay CleanUp | Checksum: 318e44cb7
+
+Time (s): cpu = 00:07:58 ; elapsed = 00:05:16 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 18.2 Clock Skew Optimization
+Phase 18.2 Clock Skew Optimization | Checksum: 318e44cb7
+
+Time (s): cpu = 00:07:58 ; elapsed = 00:05:16 . Memory (MB): peak = 2974.430 ; gain = 190.695
+Phase 18 Delay and Skew Optimization | Checksum: 318e44cb7
+
+Time (s): cpu = 00:07:58 ; elapsed = 00:05:16 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 19 Post Hold Fix
+
+Phase 19.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.121 | TNS=-4.162 | WHS=-0.008 | THS=-0.155 |
+
+Phase 19.1 Hold Fix Iter | Checksum: 29047e8ea
+
+Time (s): cpu = 00:08:00 ; elapsed = 00:05:16 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 19.2 Non Free Resource Hold Fix Iter
+Phase 19.2 Non Free Resource Hold Fix Iter | Checksum: 2623c4761
+
+Time (s): cpu = 00:08:00 ; elapsed = 00:05:16 . Memory (MB): peak = 2974.430 ; gain = 190.695
+Phase 19 Post Hold Fix | Checksum: 2623c4761
+
+Time (s): cpu = 00:08:00 ; elapsed = 00:05:16 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 20 Timing Verification
+
+Phase 20.1 Update Timing
+Phase 20.1 Update Timing | Checksum: 32b4ca30c
+
+Time (s): cpu = 00:08:03 ; elapsed = 00:05:18 . Memory (MB): peak = 2974.430 ; gain = 190.695
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.121 | TNS=-4.162 | WHS=0.080  | THS=0.000  |
+
+Phase 20 Timing Verification | Checksum: 32b4ca30c
+
+Time (s): cpu = 00:08:03 ; elapsed = 00:05:18 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 21 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 6.5284 %
+  Global Horizontal Routing Utilization  = 9.43538 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 79.2793%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 90.991%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X12Y47 -> INT_L_X12Y47
+   INT_L_X32Y17 -> INT_L_X32Y17
+East Dir 1x1 Area, Max Cong = 92.6471%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X23Y28 -> INT_R_X23Y28
+   INT_L_X28Y22 -> INT_L_X28Y22
+   INT_R_X27Y20 -> INT_R_X27Y20
+   INT_L_X20Y19 -> INT_L_X20Y19
+West Dir 2x2 Area, Max Cong = 86.3971%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X22Y52 -> INT_R_X23Y53
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: West
+----------------
+Congested clusters found at Level 1
+Effective congestion level: 2 Aspect Ratio: 0.666667 Sparse Ratio: 1
+
+Phase 21 Route finalize | Checksum: 32b4ca30c
+
+Time (s): cpu = 00:08:04 ; elapsed = 00:05:18 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 22 Verifying routed nets
+
+ Verification completed successfully
+Phase 22 Verifying routed nets | Checksum: 32b4ca30c
+
+Time (s): cpu = 00:08:04 ; elapsed = 00:05:18 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 23 Depositing Routes
+Phase 23 Depositing Routes | Checksum: 28c1aa300
+
+Time (s): cpu = 00:08:07 ; elapsed = 00:05:21 . Memory (MB): peak = 2974.430 ; gain = 190.695
+INFO: [Route 72-16] Aggressive Explore Summary
++======+========+=====+========+=====+========+==============+===================+
+| Pass |  WNS   | TNS |  WHS   | THS | Status | Elapsed Time | Solution Selected |
++======+========+=====+========+=====+========+==============+===================+
+|  1   | -0.166 |  -  | -0.008 |  -  |  Pass  |   00:03:12   |                   |
+|  2   | -0.121 |  -  | -0.008 |  -  |  Pass  |   00:01:17   |         x         |
++------+--------+-----+--------+-----+--------+--------------+-------------------+
+
+
+Phase 24 Post Process Routing
+Phase 24 Post Process Routing | Checksum: 28c1aa300
+
+Time (s): cpu = 00:08:07 ; elapsed = 00:05:21 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Phase 25 Post Router Timing
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=-0.116 | TNS=-3.675 | WHS=-0.008 | THS=-0.155 |
+
+Phase 25 Post Router Timing | Checksum: 22aabfe93
+
+Time (s): cpu = 00:08:14 ; elapsed = 00:05:25 . Memory (MB): peak = 2974.430 ; gain = 190.695
+CRITICAL WARNING: [Route 35-39] The design did not meet timing requirements. Please run report_timing_summary for detailed reports.
+Resolution: Verify that the timing was met or had small violations at all previous steps (synthesis, placement, power_opt, and phys_opt). Run report_timing_summary and analyze individual timing paths.
+INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS.
+Total Elapsed time in route_design: 324.881 secs
+
+Phase 26 Post-Route Event Processing
+Phase 26 Post-Route Event Processing | Checksum: 11ed420c4
+
+Time (s): cpu = 00:08:14 ; elapsed = 00:05:25 . Memory (MB): peak = 2974.430 ; gain = 190.695
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 11ed420c4
+
+Time (s): cpu = 00:08:15 ; elapsed = 00:05:25 . Memory (MB): peak = 2974.430 ; gain = 190.695
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 104 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:08:15 ; elapsed = 00:05:26 . Memory (MB): peak = 2974.430 ; gain = 190.695
+# phys_opt_design -directive AggressiveExplore
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k160t'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2974.430 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 9.00s |  WALL: 5.61s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2974.430 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.116 | TNS=-3.675 | WHS=-0.008 | THS=-0.155 |
+Phase 1 Physical Synthesis Initialization | Checksum: 2134ecb28
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2974.430 ; gain = 0.000
+
+Phase 2 Critical Path Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.116 | TNS=-3.675 | WHS=-0.008 | THS=-0.155 |
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[2].u_bank/cwr[608]_i_3_psbram_n_alias.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[11].ins_t_r_reg[9].
+INFO: [Physopt 32-710] Processed net g_ram[11].g_bank[2].u_bank/mem_reg_i_1__15_n_0. Critical path length was reduced through logic transformation on cell g_ram[11].g_bank[2].u_bank/mem_reg_i_1__15_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.103. Path group: clk. Processed net: g_ram[11].g_bank[2].u_bank/w_we_11.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[1].u_bank/cwr[608]_i_3_psbram_n_3_alias.
+INFO: [Physopt 32-952] Improved path group WNS = -0.103. Path group: clk. Processed net: g_st[11].g_dgen.g_dch_ram.l1[7].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: ff4_reg_n_0_[317].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[4].g_dgen.g_dch_ram.l0[1].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[13].
+INFO: [Physopt 32-952] Improved path group WNS = -0.101. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].settle.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: p_3_in[40].
+INFO: [Physopt 32-710] Processed net g_ram[5].g_bank[3].u_bank/g_st[4].del_v_r_reg[4]_54. Critical path length was reduced through logic transformation on cell g_ram[5].g_bank[3].u_bank/ff4[232]_i_1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.099. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[40].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: p_5_in[14].
+INFO: [Physopt 32-710] Processed net g_ram[5].g_bank[3].u_bank/g_st[4].del_v_r_reg[4]_60. Critical path length was reduced through logic transformation on cell g_ram[5].g_bank[3].u_bank/ff4[238]_i_1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.099. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[46].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[11].g_dgen.g_dch_ram.l1[7].
+INFO: [Physopt 32-710] Processed net g_ram[12].g_bank[3].u_bank/w_data_528[16]. Critical path length was reduced through logic transformation on cell g_ram[12].g_bank[3].u_bank/mem_reg_i_32__0_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/mem_reg_i_107__0_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: ff4_reg_n_0_[312].
+INFO: [Physopt 32-710] Processed net g_ram[5].g_bank[3].u_bank/vpipe_reg[152]_0. Critical path length was reduced through logic transformation on cell g_ram[5].g_bank[3].u_bank/ff4[248]_i_1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.095. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[40].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: ff4_reg_n_0_[343].
+INFO: [Physopt 32-710] Processed net g_ram[5].g_bank[3].u_bank/g_st[4].del_n_r_reg[61]_2. Critical path length was reduced through logic transformation on cell g_ram[5].g_bank[3].u_bank/ff4[23]_i_1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.095. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[23].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: refill_r_reg[23]_bret_bret__12_n_0.
+INFO: [Physopt 32-663] Processed net g_ram[5].g_bank[3].u_bank/g_st[4].del_v_r_reg[4].  Re-placed instance g_ram[5].g_bank[3].u_bank/refill_r[47]_bret_bret__16_i_1
+INFO: [Physopt 32-952] Improved path group WNS = -0.091. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].del_v_r_reg[4].
+INFO: [Physopt 32-710] Processed net g_ram[5].g_bank[3].u_bank/D[13]. Critical path length was reduced through logic transformation on cell g_ram[5].g_bank[3].u_bank/ff4[205]_i_1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.085. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].settle.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[13].g_bank[0].u_bank/cwr[704]_i_3_psbram_n_alias.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[13].g_dgen.g_dch_ram.l1[6].
+INFO: [Physopt 32-710] Processed net g_ram[14].g_bank[2].u_bank/w_data_624[16]. Critical path length was reduced through logic transformation on cell g_ram[14].g_bank[2].u_bank/mem_reg_0_i_37_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.085. Path group: clk. Processed net: g_ram[14].g_bank[2].u_bank/mem_reg_0_i_97_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: ff4_reg_n_0_[350].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[4].g_dgen.g_dch_ram.l0[1].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[14].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].settle.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].settle0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].g_dgen.vle1.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.079. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[5].del_v_r[5]_i_91_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[1].u_bank/cwr[608]_i_3_psbram_n_3_alias.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[11].g_dgen.g_dch_ram.l1[7].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/mem_reg_i_135__0_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[11].settle.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[11].settle0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[11].g_dgen.vle1.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[12].del_v_r[12]_i_82_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[11].g_dgen.c1v[10].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.067. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/mem_reg_i_291__0_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: p_4_in[28].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/D[12].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/ff4[204]_i_2_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].pick1.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[3].u_bank/g_st[4].g_dgen.c01.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.054. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/mem_reg_0_15_0_5_i_169_n_0.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.053. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/mem_reg_0_15_0_5_i_160_n_0.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.051. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/mem_reg_0_15_0_5_i_160_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[13].g_bank[3].u_bank/cwr[708]_i_3_psbram_n_3.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[13].g_dgen.g_dch_ram.l1[6].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.047. Path group: clk. Processed net: g_ram[14].g_bank[2].u_bank/mem_reg_1_i_21_n_0.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 34 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.038. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[12].del_v_r[12]_i_97_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[13].g_bank[0].u_bank/cwr[704]_i_3_psbram_n_alias.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.030. Path group: clk. Processed net: g_ram[14].g_bank[2].u_bank/mem_reg_0_i_89_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/gwr_d_reg[286][0].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/g_st[5].del_v_r[5]_i_85_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/g_st[4].g_dgen.c0v[11].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[5].g_bank[2].u_bank/gwr_d[219]_i_6_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[7].g_bank[0].u_bank/g_ram[5].rw1q_reg[1][0].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.028. Path group: clk. Processed net: g_ram[7].g_bank[0].u_bank/ff4[207]_i_18_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[0].u_bank/cwr[608]_i_3_psbram_n_1_alias.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[11].ins_t_r_reg[9].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[2].u_bank/w_we_11.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[2].u_bank/g_st[11].wsm.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[1].u_bank/S[0].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.022. Path group: clk. Processed net: g_ram[11].g_bank[1].u_bank/gwr_d_reg[547].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 34 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.008. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[12].del_v_r[12]_i_99_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: root_r__0[28].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_st[7].iw[23].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.008. Path group: clk. Processed net: dmin_1[28].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[11].g_bank[2].u_bank/cwr[608]_i_3_psbram_n_alias.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/mem_reg_i_111__0_n_0.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 13 pins.
+INFO: [Physopt 32-952] Improved path group WNS = -0.007. Path group: clk. Processed net: g_ram[12].g_bank[3].u_bank/g_st[11].pick1.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[14].g_bank[2].u_bank/mem_reg_0_i_117_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[14].g_bank[2].u_bank/g_st[13].settle.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[14].g_bank[2].u_bank/g_st[13].settle0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk. Processed net: g_ram[14].g_bank[3].u_bank/g_st[13].del_w_r_reg[671]_0[0].
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 34 pins.
+INFO: [Physopt 32-735] Processed net g_ram[14].g_bank[3].u_bank/g_st[14].del_v_r[14]_i_107_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.004 | TNS=0.000 | WHS=-0.008 | THS=-0.155 |
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.004 | TNS=0.000 | WHS=-0.008 | THS=-0.155 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2974.430 ; gain = 0.000
+Phase 2 Critical Path Optimization | Checksum: 2cebfe6ba
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:04 . Memory (MB): peak = 2974.430 ; gain = 0.000
+
+Phase 3 Hold Fix Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.004 | TNS=0.000 | WHS=-0.008 | THS=-0.155 |
+INFO: [Physopt 32-45] Identified 3 candidate nets for hold slack optimization.
+INFO: [Physopt 32-234] Optimized 0 nets. Inserted 0 new ZHOLD_DELAYs. Calibrated 0 existing ZHOLD_DELAYs. Inserted 0 buffers.
+
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.004 | TNS=0.000 | WHS=-0.008 | THS=-0.155 |
+Phase 3 Hold Fix Optimization | Checksum: 2cebfe6ba
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:06 . Memory (MB): peak = 2974.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2974.430 ; gain = 0.000
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=0.004 | TNS=0.000 | WHS=-0.008 | THS=-0.155 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Critical Path  |          0.120  |          3.675  |            0  |              0  |                    25  |           0  |           1  |  00:01:02  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary of Hold Fix Optimizations
+=================================
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization               |  WHS Gain (ns)  |  THS Gain (ns)  |  Added LUTs  |  Added FFs  |  Optimized Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT1 and ZHOLD Insertion   |          0.000  |          0.000  |           0  |          0  |               0  |           0  |           1  |  00:00:02  |
+|  Total                      |          0.000  |          0.000  |           0  |          0  |               0  |           0  |           1  |  00:00:02  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2974.430 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 2cebfe6ba
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:06 . Memory (MB): peak = 2974.430 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+117 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:12 . Memory (MB): peak = 2974.430 ; gain = 0.000
+# report_timing_summary -file $outdir/post_route_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_utilization    -file $outdir/post_route_util.rpt
+# report_timing -max_paths 10 -nworst 1 -file $outdir/post_route_paths.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 10 -nworst 1 -delay_type max -sort_by slack.
+# set wns [get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]]
+# set whs [get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -hold]]
+# puts "RESULT_PART $part"
+RESULT_PART xc7k160tfbg484-3
+# puts "RESULT_WNS $wns"
+RESULT_WNS 0.004
+# puts "RESULT_WHS $whs"
+RESULT_WHS -0.008
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 02:59:36 2026...

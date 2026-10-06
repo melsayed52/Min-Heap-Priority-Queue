@@ -1,0 +1,15 @@
+# Downloaded toolchain (2.3 GB)
+tools_dl/
+
+# Vivado / Xilinx scratch
+.Xil/
+*.jou
+*.backup.log
+clockInfo.txt
+dfx_runtime.txt
+
+# Icarus build outputs
+*.vvp
+
+# Local Claude settings
+.claude/
